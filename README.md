@@ -12,10 +12,14 @@
 + Máy ảo Genymonytion dùng hệ điều hành Android phiên bản ? với api ?
 
 ##Tham khảo
-+ [Sách giáo khoa Toán lớp 3](http://booktoan.com/sach-giao-khoa-toan-lop-3.html)
-+ [Sách giáo khoa Toán lớp 5](http://booktoan.com/sach-giao-khoa-toan-lop-5.html)
-+ [Sách giáo khoa Toán lớp 4](http://booktoan.com/sach-giao-khoa-toan-lop-4.html)
++ [Sách giáo khoa Toán lớp 1](http://booktoan.com/sach-giao-khoa-toan-lop-1.html)
 + [Sách giáo khoa Toán lớp 2](http://booktoan.com/sach-giao-khoa-toan-lop-2.html)
++ [Sách giáo khoa Toán lớp 3](http://booktoan.com/sach-giao-khoa-toan-lop-3.html)
++ [Sách giáo khoa Toán lớp 4](http://booktoan.com/sach-giao-khoa-toan-lop-4.html)
++ [Sách giáo khoa Toán lớp 5](http://booktoan.com/sach-giao-khoa-toan-lop-5.html)
++ [ViOlympic](http://violympic.vn/)
++ [Masterial Design](https://www.google.com/design/spec/style/color.html#color-color-schemes)
+
 
 
 
