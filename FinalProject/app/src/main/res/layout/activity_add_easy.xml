@@ -11,8 +11,14 @@
         android:id="@+id/toolbar"
         layout="@layout/tool_bar"></include>
 
-    <FrameLayout
-        android:id="@+id/addEasyActivity"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="match_parent"
+        android:background="@drawable/blackboard">
+
+        <FrameLayout
+            android:id="@+id/addEasyActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </RelativeLayout>
 </LinearLayout>
