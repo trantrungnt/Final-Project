@@ -37,7 +37,7 @@ public class AddEasyActivity extends AppCompatActivity {
     private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle(TOOLBAR_TITLE);
+        getSupportActionBar().setTitle(TOOLBAR_TITLE);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
