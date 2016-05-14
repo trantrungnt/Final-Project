@@ -2,6 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"></include>
 
     <Button
         android:id="@+id/btnSummation"
@@ -13,7 +16,7 @@
     <TextView
         android:id="@+id/tvSummaion"
         android:layout_toRightOf="@id/btnSummation"
-        android:layout_marginTop="@dimen/text_view_marginTop"
+        android:layout_marginTop="@dimen/tvSummaion_marginTop"
         android:layout_marginLeft="@dimen/text_view_marginLeft"
         android:layout_width="@dimen/text_view_width"
         android:layout_height="@dimen/text_view_height" />
@@ -21,7 +24,7 @@
     <Button
         android:id="@+id/btnSubtraction"
         android:layout_below="@id/btnSummation"
-        android:layout_marginTop="@dimen/button_marginTop"
+        android:layout_marginTop="@dimen/btnSubtraction_marginTop"
         android:layout_marginLeft="@dimen/button_marginLeft"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
@@ -37,7 +40,7 @@
     <Button
         android:id="@+id/btnMultiplication"
         android:layout_below="@id/btnSubtraction"
-        android:layout_marginTop="@dimen/button_marginTop"
+        android:layout_marginTop="@dimen/btnMultiplication_marginTop"
         android:layout_marginLeft="@dimen/button_marginLeft"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
@@ -53,7 +56,7 @@
     <Button
         android:id="@+id/btnDivision"
         android:layout_below="@id/btnMultiplication"
-        android:layout_marginTop="@dimen/button_marginTop"
+        android:layout_marginTop="@dimen/btnDivision_marginTop"
         android:layout_marginLeft="@dimen/button_marginLeft"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
@@ -69,7 +72,7 @@
     <Button
         android:id="@+id/btnMultiplicationTable"
         android:layout_below="@id/btnDivision"
-        android:layout_marginTop="@dimen/button_marginTop"
+        android:layout_marginTop="@dimen/btnMultiplicationTable_marginTop"
         android:layout_marginLeft="@dimen/button_marginLeft"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />

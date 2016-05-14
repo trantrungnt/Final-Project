@@ -18,6 +18,8 @@
         <activity
             android:name=".activity.AddEasyActivity"
             android:label="@string/easy_text"></activity>
+        <activity android:name=".activity.CategoryActivity">
+        </activity>
     </application>
 
 </manifest>
