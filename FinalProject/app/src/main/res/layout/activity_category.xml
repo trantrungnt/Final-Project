@@ -15,6 +15,8 @@
 
     <TextView
         android:id="@+id/tvSummaion"
+        android:text="@string/tvSummaion_text"
+        android:textSize="@dimen/tvSummaion_text_size"
         android:layout_toRightOf="@id/btnSummation"
         android:layout_marginTop="@dimen/tvSummaion_marginTop"
         android:layout_marginLeft="@dimen/text_view_marginLeft"
@@ -30,6 +32,8 @@
         android:layout_height="@dimen/button_height" />
     <TextView
         android:id="@+id/tvSubtraction"
+        android:text="@string/tvSubtraction_text"
+        android:textSize="@dimen/tvSubtraction_text_size"
         android:layout_toRightOf="@id/btnSubtraction"
         android:layout_below="@id/btnSummation"
         android:layout_marginTop="@dimen/text_view_marginTop"
@@ -47,6 +51,8 @@
     <TextView
         android:id="@+id/tvMultiplication"
         android:layout_toRightOf="@id/btnMultiplication"
+        android:text="@string/tvMultiplication_text"
+        android:textSize="@dimen/tvMultiplication_text_size"
         android:layout_below="@id/btnSubtraction"
         android:layout_marginTop="@dimen/text_view_marginTop"
         android:layout_marginLeft="@dimen/text_view_marginLeft"
@@ -64,6 +70,8 @@
         android:id="@+id/tvDivision"
         android:layout_toRightOf="@id/btnDivision"
         android:layout_below="@id/btnMultiplication"
+        android:text="@string/tvDivision_text"
+        android:textSize="@dimen/tvDivision_text_size"
         android:layout_marginTop="@dimen/text_view_marginTop"
         android:layout_marginLeft="@dimen/text_view_marginLeft"
         android:layout_width="@dimen/text_view_width"
@@ -79,10 +87,12 @@
     <TextView
         android:id="@+id/tvMultiplicationTable"
         android:layout_toRightOf="@id/btnMultiplicationTable"
+        android:text="@string/tvMultiplicationTable_text"
+        android:textSize="@dimen/tvMultiplicationTable_text_size"
         android:layout_below="@id/btnDivision"
         android:layout_marginTop="@dimen/text_view_marginTop"
         android:layout_marginLeft="@dimen/text_view_marginLeft"
-        android:layout_width="@dimen/text_view_width"
+        android:layout_width="@dimen/tvMultiplicationTable_width"
         android:layout_height="@dimen/text_view_height" />
 
 </RelativeLayout>

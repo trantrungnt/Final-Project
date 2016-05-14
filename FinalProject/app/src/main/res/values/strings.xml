@@ -2,4 +2,9 @@
     <string name="app_name">FinalProject</string>
     <string name="btnBeginFirstScreen_text">BẮT ĐẦU</string>
     <string name="easy_text">Easy</string>
+    <string name="tvSummaion_text">Cộng</string>
+    <string name="tvSubtraction_text">Trừ</string>
+    <string name="tvMultiplication_text">Nhân</string>
+    <string name="tvDivision_text">Chia</string>
+    <string name="tvMultiplicationTable_text">Bảng cửu chương</string>
 </resources>
