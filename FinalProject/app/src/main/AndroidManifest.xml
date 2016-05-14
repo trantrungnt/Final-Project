@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.AddEasyActivity"
+            android:label="@string/easy_text"></activity>
     </application>
 
 </manifest>
