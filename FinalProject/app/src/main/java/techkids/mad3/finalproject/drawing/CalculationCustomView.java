@@ -25,15 +25,13 @@ public class CalculationCustomView extends View {
 
     public CalculationCustomView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-        VIEW_WIDTH = getWidth();
-        VIEW_HEIGHT = getHeight();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        VIEW_WIDTH = getWidth();
+        VIEW_HEIGHT = getHeight();
         paint.setColor(Color.WHITE);
         paint.setStrokeWidth(STROKE_WIDTH);
         paint.setTextSize(TEXT_SIZE);

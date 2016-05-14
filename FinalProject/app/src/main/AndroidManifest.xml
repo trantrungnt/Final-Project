@@ -20,14 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-=======
-        <activity
-            android:name=".activity.AddEasyActivity"
-            android:label="@string/easy_text"></activity>
-        <activity android:name=".activity.CategoryActivity">
-        </activity>
->>>>>>> d8ee7e4be5608e36e4cc8d1c5e5494bafc5afd28
+        <activity android:name=".activity.CategoryActivity"></activity>
     </application>
 
 </manifest>
