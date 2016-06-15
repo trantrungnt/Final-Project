@@ -10,6 +10,7 @@
 
     <Button
         android:id="@+id/btnSummation"
+        android:alpha="0.8"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:text="@string/label_summaion_text"
@@ -21,6 +22,7 @@
 
     <Button
         android:id="@+id/btnSubtraction"
+        android:alpha="0.8"
         android:text="@string/label_subtraction_text"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
@@ -33,6 +35,7 @@
 
     <Button
         android:id="@+id/btnMultiplication"
+        android:alpha="0.8"
         android:background="@drawable/button_style"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorAccent"
@@ -54,10 +57,12 @@
         android:layout_height="@dimen/button_height"
         android:layout_below="@id/btnMultiplication"
         android:layout_marginLeft="@dimen/button_marginLeft"
+        android:alpha="0.8"
         android:layout_marginTop="@dimen/btnDivision_marginTop" />
 
     <Button
         android:id="@+id/btnMultiplicationTable"
+        android:alpha="0.8"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:textColor="@color/colorAccent"
