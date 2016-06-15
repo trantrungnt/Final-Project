@@ -20,6 +20,7 @@
 + [ViOlympic](http://violympic.vn/)
 + [Tham khảo app học Toán về giao diện](https://www.youtube.com/watch?v=qqVKs1aBLgI)
 + [Masterial Design](https://www.google.com/design/spec/style/color.html#color-color-schemes)
++ [Custom Button](https://androidcookbook.com/Recipe.seam?recipeId=3307)
 
 
 
