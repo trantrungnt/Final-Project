@@ -10,17 +10,19 @@
 
     <Button
         android:id="@+id/btnSummation"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:text="@string/label_summaion_text"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:textColor="@color/colorAccent"
         android:layout_marginLeft="@dimen/button_marginLeft"
-        android:layout_marginTop="@dimen/button_marginTop" />
+        android:layout_marginTop="@dimen/btnSummation_marginTop" />
 
     <Button
         android:id="@+id/btnSubtraction"
         android:text="@string/label_subtraction_text"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:textColor="@color/colorAccent"
         android:layout_width="@dimen/button_width"
@@ -32,6 +34,7 @@
     <Button
         android:id="@+id/btnMultiplication"
         android:background="@drawable/button_style"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/colorAccent"
         android:text="@string/label_multiplication_text"
         android:layout_width="@dimen/button_width"
@@ -43,6 +46,7 @@
 
     <Button
         android:id="@+id/btnDivision"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:textColor="@color/colorAccent"
         android:text="@string/label_division_text"
@@ -54,6 +58,7 @@
 
     <Button
         android:id="@+id/btnMultiplicationTable"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:textColor="@color/colorAccent"
         android:text="@string/label_multiplicationTable_text"

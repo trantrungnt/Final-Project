@@ -28,4 +28,5 @@
     <dimen name="add_calculation_width">120dp</dimen>
     <dimen name="add_calculation_height">130dp</dimen>
     <dimen name="on_board_text_size">48sp</dimen>
+    <dimen name="btnSummation_marginTop">125dp</dimen>
 </resources>
