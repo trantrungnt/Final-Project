@@ -46,11 +46,11 @@ public class AddEasyActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(AddEasyActivity.this, MainActivity.class);
+                Intent intent = new Intent(AddEasyActivity.this, CategoryActivity.class);
                 startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
-//    Copy above code for all activities
+    //    Copy above code for all activities
 }

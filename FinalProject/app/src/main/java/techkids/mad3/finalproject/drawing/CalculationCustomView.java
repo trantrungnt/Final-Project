@@ -51,9 +51,7 @@ public class CalculationCustomView extends View {
         canvas.drawText("" + this.secondNumber, VIEW_WIDTH, 2 * TEXT_SIZE_PX, paint);
 
 //        Draw line
-        //canvas.drawLine(0, 5 * TEXT_SIZE_PX / 2, VIEW_WIDTH, 5 * TEXT_SIZE_PX / 2, paint);
-        canvas.drawLine(0, 3* TEXT_SIZE_PX, VIEW_WIDTH, 2*TEXT_SIZE_PX, paint);
-
+        canvas.drawLine(0, 5 * TEXT_SIZE_PX / 2, VIEW_WIDTH, 5 * TEXT_SIZE_PX / 2, paint);
     }
 
     public int getFirstNumber() {
