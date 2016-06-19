@@ -6,10 +6,6 @@
     android:background="@drawable/first_background"
     tools:context=".activity.MainActivity">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/tool_bar"></include>
-
     <Button
         android:id="@+id/btnBeginFirstScreen"
         android:textColor="@color/colorAccent"
@@ -19,6 +15,5 @@
         android:layout_centerHorizontal="true"
         android:layout_width="@dimen/btnBeginFirstScreen_width"
         android:layout_height="@dimen/btnBeginFirstScreen_height"
-        android:layout_below="@id/toolbar"
         android:text="@string/btnBeginFirstScreen_text" />
 </RelativeLayout>

@@ -1,70 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/first_background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/tool_bar"></include>
+    android:layout_height="match_parent"
+    android:background="@drawable/first_background">
 
     <Button
         android:id="@+id/btnSummation"
-        android:alpha="0.8"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_style"
-        android:text="@string/label_summaion_text"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:textColor="@color/colorAccent"
-        android:layout_marginTop="@dimen/btnSummation_marginTop" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/btnSummation_marginTop"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:text="@string/label_summaion_text"
+        android:textColor="@color/colorAccent" />
 
     <Button
         android:id="@+id/btnSubtraction"
-        android:alpha="0.8"
-        android:text="@string/label_subtraction_text"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_style"
-        android:textColor="@color/colorAccent"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_below="@id/btnSummation"
-        android:layout_marginTop="@dimen/btnSubtraction_marginTop" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/btnSubtraction_marginTop"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:text="@string/label_subtraction_text"
+        android:textColor="@color/colorAccent" />
 
     <Button
         android:id="@+id/btnMultiplication"
-        android:alpha="0.8"
-        android:background="@drawable/button_style"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/colorAccent"
-        android:text="@string/label_multiplication_text"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_below="@id/btnSubtraction"
-        android:layout_marginTop="@dimen/btnMultiplication_marginTop" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/btnMultiplication_marginTop"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:text="@string/label_multiplication_text"
+        android:textColor="@color/colorAccent" />
 
 
     <Button
         android:id="@+id/btnDivision"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_style"
-        android:textColor="@color/colorAccent"
-        android:text="@string/label_division_text"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_below="@id/btnMultiplication"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/btnDivision_marginTop"
         android:alpha="0.8"
-        android:layout_marginTop="@dimen/btnDivision_marginTop" />
+        android:background="@drawable/button_style"
+        android:text="@string/label_division_text"
+        android:textColor="@color/colorAccent" />
 
     <Button
         android:id="@+id/btnMultiplicationTable"
-        android:alpha="0.8"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_style"
-        android:textColor="@color/colorAccent"
-        android:text="@string/label_multiplicationTable_text"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_below="@id/btnDivision"
-        android:layout_marginTop="@dimen/btnMultiplicationTable_marginTop" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/btnMultiplicationTable_marginTop"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:text="@string/label_multiplicationTable_text"
+        android:textColor="@color/colorAccent" />
 </RelativeLayout>
