@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.fragments.AddEasyFragment;
@@ -16,17 +17,24 @@ public class AddEasyActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
+    private Button submitButton, answerButtonA, answerButtonB, answerButtonC, answerButtonD;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_easy);
+        setContentView(R.layout.question_layout);
         initToolbar();
+        initComponents();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         initFirstFragment();
+    }
+
+    private void initComponents() {
+        submitButton = (Button) findViewById(R.id.submitButton);
     }
 
     private void initFirstFragment() {

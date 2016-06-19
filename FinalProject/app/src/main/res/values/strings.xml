@@ -7,4 +7,5 @@
     <string name="label_multiplication_text">Nhân</string>
     <string name="label_division_text">Chia</string>
     <string name="label_multiplicationTable_text">Bảng cửu chương</string>
+    <string name="submit_text">xong</string>
 </resources>
