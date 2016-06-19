@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -18,6 +19,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private final int MIN_VALUE = 1;
     private final int MAX_VALUE = 9;
     private final int TOTAL_ANSWERS = 4;
+    private final int TOTAL_QUESTIONS = 10;
 
     private Random random = new Random();
     private ArrayList<Pair> questionAsked = new ArrayList<>();
@@ -25,7 +27,9 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private TextView questionNumber;
     private Button submitButton, answerButtonA, answerButtonB, answerButtonC, answerButtonD;
     private int currentQuestionNumber = 0;
+    private Pair newValues;
     private ArrayList<Integer> answers = new ArrayList<>();
+    private int score = 0;
 
     private FragmentTransaction fragmentTransaction;
     private AddEasyFragment addEasyFragment;
@@ -68,7 +72,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             currentQuestionNumber++;
             questionNumber.setText("Câu " + currentQuestionNumber);
 
-            Pair newValues = generateRandomNumbersAndAnswer();
+            newValues = generateRandomNumbersAndAnswer();
             questionAsked.add(newValues);
             fragmentTransaction = getFragmentManager().beginTransaction();
             addEasyFragment = new AddEasyFragment(newValues.getFirstValue(), newValues.getSecondValue(), "+");
@@ -121,14 +125,45 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         return newValues;
     }
 
+    private void calculateScore() {
+        int resultFromUser = Integer.parseInt(addEasyFragment.getResultFromUser().getText().toString());
+        int firstNumber = newValues.getFirstValue();
+        int secondNumber = newValues.getSecondValue();
+        if (resultFromUser == firstNumber + secondNumber) {
+            score++;
+        }
+    }
+
+    private void submitFunction() {
+        if (addEasyFragment.getResultFromUser().getText().toString().equals("")) {
+            Toast.makeText(this, "Choose an answer!", Toast.LENGTH_SHORT).show();
+        } else {
+            calculateScore();
+            if (currentQuestionNumber < TOTAL_QUESTIONS) {
+                generateNewQuestion();
+            } else {
+                Toast.makeText(this, "" + score, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.submitButton:
-                generateNewQuestion();
+                submitFunction();
                 break;
             case R.id.answerButtonA:
                 addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
+                break;
+            case R.id.answerButtonB:
+                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
+                break;
+            case R.id.answerButtonC:
+                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(2)));
+                break;
+            case R.id.answerButtonD:
+                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
                 break;
         }
     }
