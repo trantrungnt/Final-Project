@@ -12,6 +12,11 @@
 
     <Button
         android:id="@+id/btnBeginFirstScreen"
+        android:textColor="@color/colorAccent"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:layout_marginTop="@dimen/btnBeginFirstScreen_marginTop"
+        android:layout_centerHorizontal="true"
         android:layout_width="@dimen/btnBeginFirstScreen_width"
         android:layout_height="@dimen/btnBeginFirstScreen_height"
         android:layout_below="@id/toolbar"
