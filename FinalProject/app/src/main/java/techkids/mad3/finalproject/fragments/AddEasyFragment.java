@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.drawing.CalculationCustomView;
@@ -15,8 +16,9 @@ public class AddEasyFragment extends Fragment {
     private int firstNumber;
     private int secondNumber;
     private String operator;
+    private TextView resultFromUser;
 
-    public AddEasyFragment() {
+    private AddEasyFragment() {
     }
 
     public AddEasyFragment(int firstNumber, int secondNumber, String operator) {
@@ -36,6 +38,11 @@ public class AddEasyFragment extends Fragment {
         calculationCustomView.setFirstNumber(firstNumber);
         calculationCustomView.setSecondNumber(secondNumber);
         calculationCustomView.setOperator(operator);
+        resultFromUser = (TextView) view.findViewById(R.id.resultFromUser);
         return view;
+    }
+
+    public TextView getResultFromUser() {
+        return resultFromUser;
     }
 }

@@ -16,6 +16,7 @@
             android:layout_height="@dimen/add_calculation_height" />
 
         <TextView
+            android:id="@+id/resultFromUser"
             style="@style/onBoardCalculationStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

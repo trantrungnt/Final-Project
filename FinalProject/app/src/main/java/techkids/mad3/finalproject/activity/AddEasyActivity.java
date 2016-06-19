@@ -1,6 +1,5 @@
 package techkids.mad3.finalproject.activity;
 
-import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +28,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private ArrayList<Integer> answers = new ArrayList<>();
 
     private FragmentTransaction fragmentTransaction;
-    private Fragment addEasyFragment;
+    private AddEasyFragment addEasyFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +126,9 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.submitButton:
                 generateNewQuestion();
+                break;
+            case R.id.answerButtonA:
+                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
                 break;
         }
     }
