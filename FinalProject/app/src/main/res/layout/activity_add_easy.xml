@@ -16,10 +16,23 @@
         android:layout_height="match_parent"
         android:background="@drawable/blackboard">
 
+        <TextView
+            android:id="@+id/questionNumber"
+            style="@style/onBoardStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Câu 1" />
+
         <LinearLayout
             android:id="@+id/answerChoices"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -57,6 +70,7 @@
             android:id="@+id/addEasyActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/answerChoices"></FrameLayout>
+            android:layout_above="@id/answerChoices"
+            android:layout_below="@id/questionNumber"></FrameLayout>
     </RelativeLayout>
 </LinearLayout>

@@ -2,16 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blackboard"
     tools:context="techkids.mad3.finalproject.fragments.AddEasyFragment">
-
-    <TextView
-        style="@style/onBoardStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="50dp"
-        android:text="Câu 1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -22,8 +13,7 @@
         <techkids.mad3.finalproject.drawing.CalculationCustomView
             android:id="@+id/calculationCustomView"
             android:layout_width="@dimen/add_calculation_width"
-            android:layout_height="@dimen/add_calculation_height"
-            android:layout_marginTop="@dimen/calculation_margin_top" />
+            android:layout_height="@dimen/add_calculation_height" />
 
         <TextView
             style="@style/onBoardCalculationStyle"
