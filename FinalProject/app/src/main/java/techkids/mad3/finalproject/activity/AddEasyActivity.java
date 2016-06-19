@@ -7,15 +7,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+
+import java.util.Random;
 
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.fragments.AddEasyFragment;
 
-public class AddEasyActivity extends AppCompatActivity {
+public class AddEasyActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TOOLBAR_TITLE = "Easy";
+    private final int MIN_VALUE = 1;
+    private final int MAX_VALUE = 10;
 
     private Toolbar toolbar;
+    private Random random = new Random();
 
     private Button submitButton, answerButtonA, answerButtonB, answerButtonC, answerButtonD;
 
@@ -30,20 +36,42 @@ public class AddEasyActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        initFirstFragment();
+        generateNewQuestion();
     }
 
     private void initComponents() {
         submitButton = (Button) findViewById(R.id.submitButton);
+        answerButtonA = (Button) findViewById(R.id.answerButtonA);
+        answerButtonB = (Button) findViewById(R.id.answerButtonB);
+        answerButtonC = (Button) findViewById(R.id.answerButtonC);
+        answerButtonD = (Button) findViewById(R.id.answerButtonD);
+
+        submitButton.setOnClickListener(this);
+        answerButtonA.setOnClickListener(this);
+        answerButtonB.setOnClickListener(this);
+        answerButtonC.setOnClickListener(this);
+        answerButtonD.setOnClickListener(this);
     }
 
-    private void initFirstFragment() {
-        if (null != findViewById(R.id.addEasyActivity)) {
-            Fragment addEasyFragment = new AddEasyFragment();
+    private int random(int low, int high) {
+        return low + random.nextInt(high);
+    }
+
+    private void generateNewQuestion() {
+        if (null != findViewById(R.id.questionFragment)) {
+            int sum = random(1 + MIN_VALUE, MAX_VALUE);
+            int firstNumber = random(MIN_VALUE, sum - 1);
+            int secondNumber = sum - firstNumber;
+            Fragment addEasyFragment = new AddEasyFragment(firstNumber, secondNumber);
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.addEasyActivity, addEasyFragment);
+            fragmentTransaction.add(R.id.questionFragment, addEasyFragment);
             fragmentTransaction.commit();
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     //    Init toolbar, copy for all activities
