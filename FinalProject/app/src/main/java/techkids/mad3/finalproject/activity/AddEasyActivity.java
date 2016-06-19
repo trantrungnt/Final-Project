@@ -21,6 +21,11 @@ public class AddEasyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_easy);
         initToolbar();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         initFirstFragment();
     }
 

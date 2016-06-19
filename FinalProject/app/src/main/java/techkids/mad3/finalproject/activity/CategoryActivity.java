@@ -26,10 +26,10 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         initToolbar();
-        initComponent();
+        initComponents();
     }
 
-    private void initComponent() {
+    private void initComponents() {
         btnSummation = (Button) this.findViewById(R.id.btnSummation);
         btnSummation.setOnClickListener(this);
     }
