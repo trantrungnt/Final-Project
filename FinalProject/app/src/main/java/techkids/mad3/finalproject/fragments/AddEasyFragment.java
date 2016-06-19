@@ -14,13 +14,15 @@ public class AddEasyFragment extends Fragment {
     private View view;
     private int firstNumber;
     private int secondNumber;
+    private String operator;
 
     public AddEasyFragment() {
     }
 
-    public AddEasyFragment(int firstNumber, int secondNumber) {
+    public AddEasyFragment(int firstNumber, int secondNumber, String operator) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
+        this.operator = operator;
     }
 
     @Nullable
@@ -33,6 +35,7 @@ public class AddEasyFragment extends Fragment {
         CalculationCustomView calculationCustomView = (CalculationCustomView) view.findViewById(R.id.calculationCustomView);
         calculationCustomView.setFirstNumber(firstNumber);
         calculationCustomView.setSecondNumber(secondNumber);
+        calculationCustomView.setOperator(operator);
         return view;
     }
 }
