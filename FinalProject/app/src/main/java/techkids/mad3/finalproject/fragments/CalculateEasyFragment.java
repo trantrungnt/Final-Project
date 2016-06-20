@@ -11,17 +11,17 @@ import android.widget.TextView;
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.drawing.CalculationCustomView;
 
-public class AddEasyFragment extends Fragment {
+public class CalculateEasyFragment extends Fragment {
     private View view;
     private int firstNumber;
     private int secondNumber;
     private String operator;
     private TextView resultFromUser;
 
-    private AddEasyFragment() {
+    private CalculateEasyFragment() {
     }
 
-    public AddEasyFragment(int firstNumber, int secondNumber, String operator) {
+    public CalculateEasyFragment(int firstNumber, int secondNumber, String operator) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operator = operator;

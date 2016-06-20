@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import techkids.mad3.finalproject.R;
-import techkids.mad3.finalproject.fragments.AddEasyFragment;
+import techkids.mad3.finalproject.fragments.CalculateEasyFragment;
 import techkids.mad3.finalproject.selfDefinedStructure.Pair;
 
 public class AddEasyActivity extends AppCompatActivity implements View.OnClickListener {
@@ -32,7 +32,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private int score = 0;
 
     private FragmentTransaction fragmentTransaction;
-    private AddEasyFragment addEasyFragment;
+    private CalculateEasyFragment calculateEasyFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +75,8 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             newValues = generateRandomNumbersAndAnswer();
             questionAsked.add(newValues);
             fragmentTransaction = getFragmentManager().beginTransaction();
-            addEasyFragment = new AddEasyFragment(newValues.getFirstValue(), newValues.getSecondValue(), "+");
-            fragmentTransaction.replace(R.id.questionFragment, addEasyFragment).commit();
+            calculateEasyFragment = new CalculateEasyFragment(newValues.getFirstValue(), newValues.getSecondValue(), "+");
+            fragmentTransaction.replace(R.id.questionFragment, calculateEasyFragment).commit();
 
             answerButtonA.setText("A. " + answers.get(0));
             answerButtonB.setText("B. " + answers.get(1));
@@ -126,7 +126,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void calculateScore() {
-        int resultFromUser = Integer.parseInt(addEasyFragment.getResultFromUser().getText().toString());
+        int resultFromUser = Integer.parseInt(calculateEasyFragment.getResultFromUser().getText().toString());
         int firstNumber = newValues.getFirstValue();
         int secondNumber = newValues.getSecondValue();
         if (resultFromUser == firstNumber + secondNumber) {
@@ -135,7 +135,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void submitFunction() {
-        if (addEasyFragment.getResultFromUser().getText().toString().equals("")) {
+        if (calculateEasyFragment.getResultFromUser().getText().toString().equals("")) {
             Toast.makeText(this, "Choose an answer!", Toast.LENGTH_SHORT).show();
         } else {
             calculateScore();
@@ -154,16 +154,16 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 submitFunction();
                 break;
             case R.id.answerButtonA:
-                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
                 break;
             case R.id.answerButtonB:
-                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
                 break;
             case R.id.answerButtonC:
-                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(2)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(2)));
                 break;
             case R.id.answerButtonD:
-                addEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
                 break;
         }
     }

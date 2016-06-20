@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="techkids.mad3.finalproject.fragments.AddEasyFragment">
+    tools:context=".fragments.CalculateEasyFragment">
 
     <LinearLayout
         android:layout_width="wrap_content"
