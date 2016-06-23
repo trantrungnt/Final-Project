@@ -19,6 +19,9 @@
         <activity
             android:name=".activity.AddEasyActivity"
             android:windowSoftInputMode="adjustResize|adjustPan"></activity>
+        <activity
+            android:name=".activity.SubstractEasyActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan"></activity>
     </application>
 
 </manifest>

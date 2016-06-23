@@ -12,7 +12,7 @@ import techkids.mad3.finalproject.R;
  * Created by TrungNT on 5/14/2016.
  */
 public class CategoryActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnSummation;
+    private Button btnSummation, btnSubtract;
     private Intent intentOpen;
 
     @Override
@@ -25,16 +25,36 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     private void initComponents() {
         btnSummation = (Button) this.findViewById(R.id.btnSummation);
         btnSummation.setOnClickListener(this);
+        btnSubtract = (Button) this.findViewById(R.id.btnSubtraction);
+        btnSubtract.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
 
-        if (id == R.id.btnSummation) {
-            intentOpen = new Intent(CategoryActivity.this, AddEasyActivity.class);
-            startActivity(intentOpen);
+        switch (id)
+        {
+            case R.id.btnSummation:
+                openAddEasyActivity();
+                break;
+            case R.id.btnSubtraction:
+                openSubstractEasyActivity();
+                break;
         }
+
+
+    }
+
+    private void openSubstractEasyActivity() {
+        intentOpen = new Intent(CategoryActivity.this, SubstractEasyActivity.class);
+        startActivity(intentOpen);
+    }
+
+    private void openAddEasyActivity()
+    {
+        intentOpen = new Intent(CategoryActivity.this, AddEasyActivity.class);
+        startActivity(intentOpen);
     }
 }
 
