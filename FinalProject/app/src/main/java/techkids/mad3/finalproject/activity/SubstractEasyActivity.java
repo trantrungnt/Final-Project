@@ -145,12 +145,14 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
         int resultFromUser = Integer.parseInt(calculateEasyFragment.getResultFromUser().getText().toString());
         int firstNumber = newValues.getFirstValue();
         int secondNumber = newValues.getSecondValue();
+        int subStractNumber;
 
-        if ((resultFromUser == firstNumber - secondNumber) && (firstNumber > secondNumber)) {
-            score++;
-        }
+        if (firstNumber > secondNumber)
+            subStractNumber = firstNumber - secondNumber;
+        else
+            subStractNumber = secondNumber - firstNumber;
 
-        if ((resultFromUser == secondNumber - firstNumber) && (secondNumber > firstNumber)) {
+        if (resultFromUser == subStractNumber) {
             score++;
         }
     }
