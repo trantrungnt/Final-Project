@@ -8,4 +8,6 @@
     <string name="label_division_text">Chia</string>
     <string name="label_multiplicationTable_text">Bảng cửu chương</string>
     <string name="submit_text">nộp bài</string>
+    <string name="try_again_text">Làm lại</string>
+    <string name="score_notification_text">Điểm của bạn</string>
 </resources>

@@ -1,6 +1,7 @@
 package techkids.mad3.finalproject.activity;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import techkids.mad3.finalproject.R;
+import techkids.mad3.finalproject.constants.Helper;
 import techkids.mad3.finalproject.fragments.CalculateEasyFragment;
 import techkids.mad3.finalproject.selfDefinedStructure.Pair;
 
@@ -142,9 +144,18 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             if (currentQuestionNumber < TOTAL_QUESTIONS) {
                 generateNewQuestion();
             } else {
-                Toast.makeText(this, "" + score, Toast.LENGTH_LONG).show();
+                moveToDisplayScoreActivity();
             }
         }
+    }
+
+    private void moveToDisplayScoreActivity() {
+        Bundle bundle = new Bundle();
+        bundle.putInt(Helper.FINAL_SCORE_KEY, score);
+        bundle.putInt(Helper.TOTAL_QUESTIONS, TOTAL_QUESTIONS);
+        Intent intent = new Intent(AddEasyActivity.this, DisplayScoreActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 
     @Override

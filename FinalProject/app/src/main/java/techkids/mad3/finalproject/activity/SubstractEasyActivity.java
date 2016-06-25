@@ -1,9 +1,9 @@
 package techkids.mad3.finalproject.activity;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import techkids.mad3.finalproject.R;
+import techkids.mad3.finalproject.constants.Helper;
 import techkids.mad3.finalproject.fragments.CalculateEasyFragment;
 import techkids.mad3.finalproject.selfDefinedStructure.Pair;
 
@@ -105,14 +106,19 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
             repeated = false;
             int firstNumber = random(MIN_VALUE, MAX_VALUE);
             int secondNumber = random(MIN_VALUE, MAX_VALUE);
+            if (firstNumber > secondNumber) {
+                int tmp = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber = tmp;
+            }
             int subStractionNumber;
             if (firstNumber > secondNumber)
-                subStractionNumber =  firstNumber - secondNumber;
+                subStractionNumber = firstNumber - secondNumber;
             else
-                subStractionNumber =  secondNumber - firstNumber;
-
+                subStractionNumber = secondNumber - firstNumber;
 
             newValues = new Pair(firstNumber, secondNumber);
+
             answers.add(subStractionNumber);
             for (Pair askedQuestion : questionAsked) {
                 if (askedQuestion.equals(newValues)) {
@@ -167,7 +173,7 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
             fragmentTransaction = getFragmentManager().beginTransaction();
 
             if (newValues.getFirstValue() > newValues.getSecondValue())
-                 calculateEasyFragment = new CalculateEasyFragment(newValues.getFirstValue(), newValues.getSecondValue(), "-");
+                calculateEasyFragment = new CalculateEasyFragment(newValues.getFirstValue(), newValues.getSecondValue(), "-");
             else
                 calculateEasyFragment = new CalculateEasyFragment(newValues.getSecondValue(), newValues.getFirstValue(), "-");
             fragmentTransaction.replace(R.id.questionFragment, calculateEasyFragment).commit();
@@ -187,8 +193,17 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
             if (currentQuestionNumber < TOTAL_QUESTIONS) {
                 generateNewQuestion();
             } else {
-                Toast.makeText(this, "" + score, Toast.LENGTH_LONG).show();
+                moveToDisplayScoreActivity();
             }
         }
+    }
+
+    private void moveToDisplayScoreActivity() {
+        Bundle bundle = new Bundle();
+        bundle.putInt(Helper.FINAL_SCORE_KEY, score);
+        bundle.putInt(Helper.TOTAL_QUESTIONS, TOTAL_QUESTIONS);
+        Intent intent = new Intent(SubstractEasyActivity.this, DisplayScoreActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
