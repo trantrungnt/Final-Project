@@ -17,7 +17,7 @@
 
 ##Môi trường phát triển
 + Bộ công cụ Android Studio 2.1
-+ Máy ảo Genymonytion dùng hệ điều hành Android phiên bản ? với api ?
++ Máy ảo Genymonytion dùng hệ điều hành Android từ api min 17 tới api max 23?
 
 ##Tham khảo
 + [Sách giáo khoa Toán lớp 1](http://booktoan.com/sach-giao-khoa-toan-lop-1.html)
