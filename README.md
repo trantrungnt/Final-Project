@@ -1,6 +1,6 @@
 # Final-Project
 
-##Các thành viên trong nhóm lớp Android khóa 3 - TechKids
+##Các thành viên trong nhóm 1 lớp Android khóa 3 - TechKids
 + [Nguyễn Trần Trung](https://github.com/trantrungnt)
 + [Hoàng Dương](https://github.com/hoangduong97) 
 
@@ -32,7 +32,7 @@
 
 ##Môi trường phát triển
 + Bộ công cụ Android Studio 2.1
-+ Máy ảo Genymonytion dùng hệ điều hành Android từ api min 17 tới api max 23
++ Máy ảo Genymotion dùng hệ điều hành Android từ api min 17 tới api max 23
 
 ##Tham khảo
 + [Sách giáo khoa Toán lớp 1](http://booktoan.com/sach-giao-khoa-toan-lop-1.html)
