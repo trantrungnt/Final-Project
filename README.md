@@ -6,6 +6,13 @@
 
 ##Các công việc phải làm
 + [Phân tích yêu cầu bài toán và tạo Bản giao diện thiết kế](https://goo.gl/aFsDRo)
++ Giao diện Main Activity: Start (tạm thời)
++ Giao diện Category (tạm thời)
++ Chức năng Phép cộng (đã có giao diện, tính 10 câu và đã tính được điểm)
++ Chức năng phép trừ (đã có giao diện, tính 10 câu và đã tính được điểm)
++ Chức năng phép nhân (giao diện nội dung câu hỏi?)
++ Chức năng phép chia (giao diện nội dung câu hỏi?)
+
 
 ##Thiết kế giao diện nội dung bộ câu hỏi
 ![final-project-1](http://i477.photobucket.com/albums/rr132/trungepu/final-project-1_zpsrznvlfms.jpg)
@@ -14,10 +21,9 @@
 ![final-project-4](http://i477.photobucket.com/albums/rr132/trungepu/final-project-4_zpsuvkmkz6k.jpg)
 ![final-project-5](http://i477.photobucket.com/albums/rr132/trungepu/final-project-5_zpsscqmdss7.jpg)
 
-
 ##Môi trường phát triển
 + Bộ công cụ Android Studio 2.1
-+ Máy ảo Genymonytion dùng hệ điều hành Android từ api min 17 tới api max 23?
++ Máy ảo Genymonytion dùng hệ điều hành Android từ api min 17 tới api max 23
 
 ##Tham khảo
 + [Sách giáo khoa Toán lớp 1](http://booktoan.com/sach-giao-khoa-toan-lop-1.html)
