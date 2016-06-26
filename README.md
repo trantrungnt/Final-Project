@@ -12,9 +12,9 @@
 + Chức năng phép trừ (đã có giao diện, tính 10 câu và đã tính được điểm)
 + Chức năng phép nhân (giao diện nội dung câu hỏi?)
 + Chức năng phép chia (giao diện nội dung câu hỏi?)
-+ Thêm các mẫu thiết kế giao diện khác nhau cho bộ câu hỏi?
++ Thêm các mẫu thiết kế giao diện khác nhau cho bộ câu hỏi? (hướng phát triển: dùng canvas để vẽ)
 + Hiệu ứng cho Activity, Fragment?
-+ Âm thanh cho app?
++ Âm thanh cho app? (hướng phát triển: dùng Sound Pool để load các file âm thanh?)
 
 
 ##Thiết kế giao diện nội dung bộ câu hỏi
