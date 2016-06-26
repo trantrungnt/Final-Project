@@ -176,6 +176,8 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
                 calculateEasyFragment = new CalculateEasyFragment(newValues.getFirstValue(), newValues.getSecondValue(), "-");
             else
                 calculateEasyFragment = new CalculateEasyFragment(newValues.getSecondValue(), newValues.getFirstValue(), "-");
+
+            fragmentTransaction.setCustomAnimations(R.anim.left_to_right, 0);
             fragmentTransaction.replace(R.id.questionFragment, calculateEasyFragment).commit();
 
             btnAnswerA.setText("A. " + answers.get(0));
