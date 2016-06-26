@@ -45,6 +45,7 @@
 + [Masterial Design](https://www.google.com/design/spec/style/color.html#color-color-schemes)
 + [Custom Button](https://androidcookbook.com/Recipe.seam?recipeId=3307)
 + [How to achieve right to left animation to start the activity](http://stackoverflow.com/questions/26431017/how-to-achieve-right-to-left-animation-to-start-the-activity)
++ [Android left to right slide animation](http://stackoverflow.com/questions/5151591/android-left-to-right-slide-animation)
 
 
 
