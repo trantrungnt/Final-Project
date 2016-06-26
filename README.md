@@ -21,6 +21,7 @@
 + Thêm các mẫu thiết kế giao diện khác nhau cho bộ câu hỏi? (hướng phát triển: dùng canvas để vẽ)
 + Hiệu ứng cho Activity, Fragment?
 + Âm thanh cho app? (hướng phát triển: dùng Sound Pool để load các file âm thanh?)
++ Lưu nội dung câu hỏi và Database (nội dung câu hỏi gồm: các bài toán đố lớp 2, 3 và lưu dữ liệu trong SQLite?)
 
 
 ##Thiết kế giao diện nội dung bộ câu hỏi
