@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnBeginFirstScreen:
                 Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
                 break;
         }
     }
