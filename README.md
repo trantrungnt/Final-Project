@@ -15,9 +15,9 @@
 + Giao diện Main Activity: Start (tạm thời)
 + Giao diện Category (tạm thời)
 + Chức năng Phép cộng (đã có giao diện, tính 10 câu và đã tính được điểm)
-+ Chức năng phép trừ (đã có giao diện, tính 10 câu và đã tính được điểm)
-+ Chức năng phép nhân (giao diện nội dung câu hỏi?)
-+ Chức năng phép chia (giao diện nội dung câu hỏi?)
++ Chức năng Phép trừ (đã có giao diện, tính 10 câu và đã tính được điểm)
++ Chức năng Phép nhân (giao diện nội dung câu hỏi?)
++ Chức năng Phép chia (giao diện nội dung câu hỏi?)
 + Thêm các mẫu thiết kế giao diện khác nhau cho bộ câu hỏi? (hướng phát triển: dùng canvas để vẽ)
 + Hiệu ứng cho Activity, Fragment?
 + Âm thanh cho app? (hướng phát triển: dùng Sound Pool để load các file âm thanh?)
@@ -49,6 +49,7 @@
 + [How to achieve right to left animation to start the activity](http://stackoverflow.com/questions/26431017/how-to-achieve-right-to-left-animation-to-start-the-activity)
 + [Android left to right slide animation](http://stackoverflow.com/questions/5151591/android-left-to-right-slide-animation)
 + [Material Animations](https://github.com/lgvalle/Material-Animations)
++ [Fragments translate animation](http://trickyandroid.com/fragments-translate-animation/)
 
 
 
