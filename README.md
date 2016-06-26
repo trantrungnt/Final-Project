@@ -1,8 +1,14 @@
 # Final-Project
 
-##Các thành viên trong nhóm
+##Các thành viên trong nhóm lớp Android khóa 3 - TechKids
 + [Nguyễn Trần Trung](https://github.com/trantrungnt)
 + [Hoàng Dương](https://github.com/hoangduong97) 
+
+##Giảng viên hướng dẫn 
++ Bùi Xuân Cảnh
++ Trần Đức Hùng
++ Lê Tiến Dũng
++ Vũ Nhật Linh
 
 ##Các công việc phải làm
 + [Phân tích yêu cầu bài toán và tạo Bản giao diện thiết kế](https://goo.gl/aFsDRo)
