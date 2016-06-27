@@ -34,4 +34,5 @@
     <dimen name="try_again_button_margin_top">24dp</dimen>
     <dimen name="score_notification_margin_bottom">24dp</dimen>
     <dimen name="score_notification_text_size">36sp</dimen>
+    <dimen name="btn_height">71dp</dimen>
 </resources>

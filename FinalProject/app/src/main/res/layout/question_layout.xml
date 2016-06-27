@@ -13,6 +13,9 @@
 
         <Button
             android:id="@+id/submitButton"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -39,36 +42,44 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/answerButtonA"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/answer1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/answerButtonB"
+                    android:background="@drawable/answer3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/answerButtonC"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/answer2"
+                    android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/answerButtonD"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:background="@drawable/answer4"
+                    android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
             </LinearLayout>
         </LinearLayout>
