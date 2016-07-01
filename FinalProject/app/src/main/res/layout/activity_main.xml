@@ -16,4 +16,28 @@
         android:layout_width="@dimen/btnBeginFirstScreen_width"
         android:layout_height="@dimen/btnBeginFirstScreen_height"
         android:text="@string/btnBeginFirstScreen_text" />
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_below="@id/btnBeginFirstScreen"
+        android:layout_marginTop="@dimen/btnTest_marginTop"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btnTest_text"
+        android:textColor="@color/colorAccent"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+    />
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_below="@id/btnTest"
+        android:layout_marginTop="@dimen/btnExit_marginTop"
+        android:layout_centerHorizontal="true"
+        android:text="Thoát"
+        android:textColor="@color/colorAccent"
+        android:alpha="0.8"
+        android:background="@drawable/button_style"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        />
 </RelativeLayout>

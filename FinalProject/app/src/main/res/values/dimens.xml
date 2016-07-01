@@ -29,10 +29,12 @@
     <dimen name="add_calculation_height">130dp</dimen>
     <dimen name="on_board_text_size">48sp</dimen>
     <dimen name="btnSummation_marginTop">125dp</dimen>
-    <dimen name="btnBeginFirstScreen_marginTop">210dp</dimen>
+    <dimen name="btnBeginFirstScreen_marginTop">160dp</dimen>
     <dimen name="final_score_text_size">72sp</dimen>
     <dimen name="try_again_button_margin_top">24dp</dimen>
     <dimen name="score_notification_margin_bottom">24dp</dimen>
     <dimen name="score_notification_text_size">36sp</dimen>
     <dimen name="btn_height">71dp</dimen>
+    <dimen name="btnTest_marginTop">15dp</dimen>
+    <dimen name="btnExit_marginTop">15dp</dimen>
 </resources>
