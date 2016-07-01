@@ -23,11 +23,10 @@
 + Âm thanh cho app? (hướng phát triển: dùng Sound Pool để load các file âm thanh?)
 + Lưu nội dung câu hỏi vào Database (nội dung câu hỏi gồm: các bài toán đố lớp 2, 3 và lưu dữ liệu trong SQLite?)
 + Bảng xếp hạng điểm của người chơi (dùng Service của Google?)
-+ Chức năng Phép Cộng: lồng thêm nội dung bài toán đố liên quan phép cộng (nội dung lưu trong sqlite)
-+ Chức năng Phép trừ: lồng thêm nội dung bài toán đó liên quan phép trừ (nội dung lưu trong sqlite)
-+ Chức năng Phép Chia: lồng thêm nội dung bài toán đó liên quan phép chia (nội dung lưu trong sqlite)
-+ Chức năng Phép Nhân: lồng thêm nội ding bài toán đố liên qua phép chia (nội dung lưu trong sqlite)
-
++ Chức năng Phép Cộng: lồng thêm nội dung bài toán đố liên quan phép cộng (nội dung lưu trong sqlite, độ dễ thì cộng 2 số trong khoảng từ 1-10, độ trung bình: từ 1 -> 99, độ khó: từ 100 ->999)
++ Chức năng Phép trừ: lồng thêm nội dung bài toán đó liên quan phép trừ (nội dung lưu trong sqlite, độ dễ thì cộng 2 số trong khoảng từ 1-10, độ trung bình: từ 1 -> 99, độ khó: từ 100 ->999)
++ Chức năng Phép Chia: lồng thêm nội dung bài toán đó liên quan phép chia (nội dung lưu trong sqlite, độ dễ thì cộng 2 số trong khoảng từ 1-10, độ trung bình: từ 1 -> 99, độ khó: từ 100 ->999)
++ Chức năng Phép Nhân: lồng thêm nội ding bài toán đố liên qua phép chia (nội dung lưu trong sqlite, độ dễ thì cộng 2 số trong khoảng từ 1-10, độ trung bình: từ 1 -> 99, độ khó: từ 100 ->999)
 
 
 ##Thiết kế giao diện nội dung bộ câu hỏi
