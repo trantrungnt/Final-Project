@@ -9,7 +9,7 @@ import android.widget.Button;
 import techkids.mad3.finalproject.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button button;
+    private Button btnBeginFirstScreen, btnTest, btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +19,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initComponents() {
-        button = (Button) findViewById(R.id.btnBeginFirstScreen);
-        button.setOnClickListener(this);
+        btnBeginFirstScreen = (Button) this.findViewById(R.id.btnBeginFirstScreen);
+        btnBeginFirstScreen.setOnClickListener(this);
+
+        btnTest = (Button) this.findViewById(R.id.btnTest);
+        btnTest.setOnClickListener(this);
+
+        btnExit = (Button) this.findViewById(R.id.btnExit);
+        btnExit.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnBeginFirstScreen:
-                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+                openCategoryActivity();
                 break;
         }
+    }
+
+    private void openCategoryActivity()
+    {
+        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 }
