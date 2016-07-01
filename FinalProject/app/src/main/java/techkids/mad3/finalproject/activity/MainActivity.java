@@ -10,6 +10,7 @@ import techkids.mad3.finalproject.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnBeginFirstScreen, btnTest, btnExit;
+    private Intent intentOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +36,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnBeginFirstScreen:
                 openCategoryActivity();
                 break;
+            case R.id.btnExit:
+                closeMainActivity();
+                break;
         }
+    }
+
+    private void closeMainActivity() {
+        this.finish();
     }
 
     private void openCategoryActivity()
     {
-        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
-        startActivity(intent);
+        intentOpen = new Intent(MainActivity.this, CategoryActivity.class);
+        startActivity(intentOpen);
         overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 }
