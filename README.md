@@ -12,9 +12,9 @@
 
 ##Các công việc phải làm
 + [Phân tích yêu cầu bài toán và tạo Bản giao diện thiết kế](https://goo.gl/aFsDRo)
-+ Giao diện Main Activity: Start (tạm thời)
++ Giao diện Main Activity: Start (tạm thời): gồm 3 nút: Luyện tập, Kiểm tra, Thoát ...
 + Giao diện Category (tạm thời)
-+ Chức năng Phép cộng (đã có giao diện, tính 10 câu và đã tính được điểm)
++ Chức năng Phép cộng (đã có giao diện, tính 10 câu và đã tính được điểm) 
 + Chức năng Phép trừ (đã có giao diện, tính 10 câu và đã tính được điểm)
 + Chức năng Phép nhân (giao diện nội dung câu hỏi?)
 + Chức năng Phép chia (giao diện nội dung câu hỏi?)
@@ -23,6 +23,11 @@
 + Âm thanh cho app? (hướng phát triển: dùng Sound Pool để load các file âm thanh?)
 + Lưu nội dung câu hỏi vào Database (nội dung câu hỏi gồm: các bài toán đố lớp 2, 3 và lưu dữ liệu trong SQLite?)
 + Bảng xếp hạng điểm của người chơi (dùng Service của Google?)
++ Chức năng Phép Cộng: lồng thêm nội dung bài toán đố liên quan phép cộng (nội dung lưu trong sqlite)
++ Chức năng Phép trừ: lồng thêm nội dung bài toán đó liên quan phép trừ (nội dung lưu trong sqlite)
++ Chức năng Phép Chia: lồng thêm nội dung bài toán đó liên quan phép chia (nội dung lưu trong sqlite)
++ Chức năng Phép Nhân: lồng thêm nội ding bài toán đố liên qua phép chia (nội dung lưu trong sqlite)
+
 
 
 ##Thiết kế giao diện nội dung bộ câu hỏi
