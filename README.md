@@ -63,3 +63,4 @@
 + [Import Database](https://gist.github.com/donaldlittlepie/1271795)
 + [Import Sqlite database into Android using SQLite Browser](http://androidgifts.com/import-sqlite-database-into-android-using-sqlite-browser/)
 + [Sound pool example in Android Development](http://www.edumobile.org/android/sound-pool-example-in-android-development/)
++ [Count Down Example in Android Custom](http://www.androidhub4you.com/2014/01/countdown-example-in-android-custom.html)
