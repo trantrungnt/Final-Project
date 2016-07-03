@@ -61,4 +61,4 @@
 + [Cách sử dụng SQLite trong Android](https://duythanhcse.wordpress.com/2013/06/12/bai-tap-31-cach-su-dung-sqlite-trong-android/)
 + [Import and use external database](http://www.javahelps.com/2015/04/import-and-use-external-database-in.html)
 + [Import Database](https://gist.github.com/donaldlittlepie/1271795)
-
++ [Import Sqlite database into Android using SQLite Browser](http://androidgifts.com/import-sqlite-database-into-android-using-sqlite-browser/)
