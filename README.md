@@ -59,6 +59,6 @@
 + [Android Activity and Fragment transition animation](http://www.programering.com/a/MzN5UDMwATE.html)
 + [Online Image Editor](http://www.online-image-editor.com/)
 + [Cách sử dụng SQLite trong Android](https://duythanhcse.wordpress.com/2013/06/12/bai-tap-31-cach-su-dung-sqlite-trong-android/)
-
++ [Import and use external database](http://www.javahelps.com/2015/04/import-and-use-external-database-in.html)
 
 
