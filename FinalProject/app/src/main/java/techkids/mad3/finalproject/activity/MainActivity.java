@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initComponents();
-        playSoundMain();
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
+        playSoundMain();
     }
 
     private void initComponents() {

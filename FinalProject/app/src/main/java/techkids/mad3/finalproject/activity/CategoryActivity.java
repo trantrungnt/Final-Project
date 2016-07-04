@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import techkids.mad3.finalproject.R;
+import techkids.mad3.finalproject.models.SoundAccess;
 
 /**
  * Created by TrungNT on 5/14/2016.
@@ -14,6 +15,7 @@ import techkids.mad3.finalproject.R;
 public class CategoryActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnSummation, btnSubtract;
     private Intent intentOpen;
+    private SoundAccess soundAccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +24,20 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         initComponents();
     }
 
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        loadSoundCategory();
+    }
+
     private void initComponents() {
         btnSummation = (Button) this.findViewById(R.id.btnSummation);
         btnSummation.setOnClickListener(this);
         btnSubtract = (Button) this.findViewById(R.id.btnSubtraction);
         btnSubtract.setOnClickListener(this);
+
+        soundAccess = new SoundAccess();
     }
 
     @Override
@@ -37,9 +48,11 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         {
             case R.id.btnSummation:
                 openAddEasyActivity();
+                stopSoundCategory();
                 break;
             case R.id.btnSubtraction:
                 openSubstractEasyActivity();
+                stopSoundCategory();
                 break;
         }
 
@@ -55,6 +68,16 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     {
         intentOpen = new Intent(CategoryActivity.this, AddEasyActivity.class);
         startActivity(intentOpen);
+    }
+
+    private void loadSoundCategory()
+    {
+        soundAccess.loadSoundBackground(getApplicationContext(), "sound/music_category.mp3");
+    }
+
+    private void stopSoundCategory()
+    {
+        soundAccess.stopSoundBackground();
     }
 }
 
