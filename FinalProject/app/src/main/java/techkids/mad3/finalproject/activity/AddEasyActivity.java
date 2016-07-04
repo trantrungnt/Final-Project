@@ -15,6 +15,7 @@ import java.util.Random;
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.constants.Helper;
 import techkids.mad3.finalproject.fragments.CalculateEasyFragment;
+import techkids.mad3.finalproject.models.SoundAccess;
 import techkids.mad3.finalproject.selfDefinedStructure.Pair;
 
 public class AddEasyActivity extends AppCompatActivity implements View.OnClickListener {
@@ -35,6 +36,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
 
     private FragmentTransaction fragmentTransaction;
     private CalculateEasyFragment calculateEasyFragment;
+    private SoundAccess soundAccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,9 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         answerButtonB.setOnClickListener(this);
         answerButtonC.setOnClickListener(this);
         answerButtonD.setOnClickListener(this);
+
+        soundAccess = new SoundAccess();
+        soundAccess.initCorrectAnswer1(getApplicationContext(), R.raw.dung1);
     }
 
     private int random(int low, int high) {
@@ -168,6 +173,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.answerButtonA:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
+                soundAccess.playCorrectAnswer1(1, 1, 1, 0, 1);
                 break;
             case R.id.answerButtonB:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));

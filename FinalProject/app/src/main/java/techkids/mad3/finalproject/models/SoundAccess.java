@@ -6,9 +6,6 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 
-import java.io.IOException;
-
-import techkids.mad3.finalproject.R;
 
 /**
  * Created by TrungNT on 7/4/2016.
@@ -16,6 +13,7 @@ import techkids.mad3.finalproject.R;
 public class SoundAccess {
     private SoundPool sounds;
     private MediaPlayer mediaPlayer;
+    int soundCorrect1;
 
     public void loadSoundBackground(Context ctx, String fileName)
     {
@@ -41,8 +39,14 @@ public class SoundAccess {
         }
     }
 
-    public void playSoundEffect(String fileName) {
+    public void initCorrectAnswer1(Context ctx, int fileName) {
+        sounds = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        soundCorrect1 =  sounds.load(ctx, fileName, 1);
+    }
 
+    public void playCorrectAnswer1(float leftVolume, float rightVolume, int priority, int loop, float rate)
+    {
+        sounds.play(soundCorrect1, leftVolume, rightVolume, priority, loop, rate);
     }
 
 }
