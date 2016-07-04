@@ -1,8 +1,12 @@
 package techkids.mad3.finalproject.models;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
+
+import java.io.IOException;
 
 import techkids.mad3.finalproject.R;
 
@@ -10,6 +14,7 @@ import techkids.mad3.finalproject.R;
  * Created by TrungNT on 7/4/2016.
  */
 public class SoundAccess {
+    private SoundPool sounds;
     private MediaPlayer mediaPlayer;
 
     public void loadSoundBackground(Context ctx, String fileName)
@@ -35,4 +40,9 @@ public class SoundAccess {
             mediaPlayer = null;
         }
     }
+
+    public void playSoundEffect(String fileName) {
+
+    }
+
 }
