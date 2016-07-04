@@ -65,3 +65,4 @@
 + [Sound pool example in Android Development](http://www.edumobile.org/android/sound-pool-example-in-android-development/)
 + [Count Down Example in Android Custom](http://www.androidhub4you.com/2014/01/countdown-example-in-android-custom.html)
 + [Cách chia Package trong Android](https://github.com/futurice/android-best-practices#networklibs)
++ [Using Android's sound pool class a Tutorial](http://www.101apps.co.za/index.php/articles/using-android-s-soundpool-class-a-tutorial.html)
