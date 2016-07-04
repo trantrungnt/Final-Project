@@ -67,3 +67,4 @@
 + [Cách chia Package trong Android](https://github.com/futurice/android-best-practices#networklibs)
 + [Using Android's sound pool class a Tutorial](http://www.101apps.co.za/index.php/articles/using-android-s-soundpool-class-a-tutorial.html)
 + [Playing game sound effects using soundpool](https://www.youtube.com/watch?v=wQ2DKxNtrT4)
++ [How to play sounds using SoundPool](https://www.youtube.com/watch?v=MDJWQ4NRga8)
