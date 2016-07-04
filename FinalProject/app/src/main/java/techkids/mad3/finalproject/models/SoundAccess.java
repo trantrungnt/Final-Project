@@ -39,12 +39,12 @@ public class SoundAccess {
         }
     }
 
-    public void initCorrectAnswer1(Context ctx, int fileName) {
+    public void initCorrectAnswer3(Context ctx, int fileName) {
         sounds = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         soundCorrect1 =  sounds.load(ctx, fileName, 1);
     }
 
-    public void playCorrectAnswer1(float leftVolume, float rightVolume, int priority, int loop, float rate)
+    public void playCorrectAnswer3(float leftVolume, float rightVolume, int priority, int loop, float rate)
     {
         sounds.play(soundCorrect1, leftVolume, rightVolume, priority, loop, rate);
     }

@@ -67,7 +67,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         answerButtonD.setOnClickListener(this);
 
         soundAccess = new SoundAccess();
-        soundAccess.initCorrectAnswer1(getApplicationContext(), R.raw.dung1);
+        soundAccess.initCorrectAnswer3(getApplicationContext(), R.raw.dung3);
     }
 
     private int random(int low, int high) {
@@ -173,7 +173,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.answerButtonA:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
-                soundAccess.playCorrectAnswer1(1, 1, 1, 0, 1);
+                soundAccess.playCorrectAnswer3(1, 1, 1, 0, 1);
                 break;
             case R.id.answerButtonB:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
