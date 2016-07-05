@@ -39,6 +39,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private CalculateEasyFragment calculateEasyFragment;
     private SoundAccess soundAccess;
     private ArrayList<Integer> indexs = new ArrayList<>();
+    private int[] a = getArrayIndex(4);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,10 +90,10 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             fragmentTransaction.setCustomAnimations(R.anim.left_to_right, 0);
             fragmentTransaction.replace(R.id.questionFragment, calculateEasyFragment).commit();
 
-            answerButtonA.setText("A. " + answers.get(0));
-            answerButtonB.setText("B. " + answers.get(1));
-            answerButtonC.setText("C. " + answers.get(2));
-            answerButtonD.setText("D. " + answers.get(3));
+            answerButtonA.setText("A. " + answers.get(a[0]));
+            answerButtonB.setText("B. " + answers.get(a[1]));
+            answerButtonC.setText("C. " + answers.get(a[2]));
+            answerButtonD.setText("D. " + answers.get(a[3]));
         }
     }
 
@@ -174,19 +175,19 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 submitFunction();
                 break;
             case R.id.answerButtonA:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[0])));
                 soundAccess.playCorrectAnswer3(1, 1, 1, 0, 1);
                 getArrayIndex(4);
 
                 break;
             case R.id.answerButtonB:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[1])));
                 break;
             case R.id.answerButtonC:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(2)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[2])));
                 break;
             case R.id.answerButtonD:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[3])));
                 break;
         }
     }
@@ -198,7 +199,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         boolean isDuplicated = false;
         while (i < a.length) {
             // Dùng Math.abs() để tráng số âm và 0
-            b = Math.abs(ran.nextInt() % a.length) + 1;
+            b = Math.abs(ran.nextInt() % a.length);
             isDuplicated = false;
             // Có thể tách thành 1 phương thức riêng
             for(j = 0; j < i; j++) {
@@ -211,7 +212,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 a[i] = b;
                 i++;
             }
-            // Nếu trùng thì tếp tục "dò số"
+            // Nếu trùng thì tiếp tục "dò số"
         }
 
         for(i = 0; i < a.length; i++) {
