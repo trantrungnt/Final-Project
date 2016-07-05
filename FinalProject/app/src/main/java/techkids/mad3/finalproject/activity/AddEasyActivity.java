@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,6 +38,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private FragmentTransaction fragmentTransaction;
     private CalculateEasyFragment calculateEasyFragment;
     private SoundAccess soundAccess;
+    private ArrayList<Integer> indexs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,6 +176,8 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.answerButtonA:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
                 soundAccess.playCorrectAnswer3(1, 1, 1, 0, 1);
+                getArrayIndex(4);
+
                 break;
             case R.id.answerButtonB:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
@@ -185,5 +189,34 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
                 break;
         }
+    }
+
+    private int[] getArrayIndex(int n) {
+        int[] a = new int [n];
+        Random ran = new Random();
+        int i = 0, j, b;
+        boolean isDuplicated = false;
+        while (i < a.length) {
+            // Dùng Math.abs() để tráng số âm và 0
+            b = Math.abs(ran.nextInt() % a.length) + 1;
+            isDuplicated = false;
+            // Có thể tách thành 1 phương thức riêng
+            for(j = 0; j < i; j++) {
+                if(a[j] == b) {
+                    isDuplicated = true;
+                }
+            }
+            // Nếu không trùng thì gán và tăng i
+            if (!isDuplicated) {
+                a[i] = b;
+                i++;
+            }
+            // Nếu trùng thì tếp tục "dò số"
+        }
+
+        for(i = 0; i < a.length; i++) {
+            Log.d("abc", String.valueOf(a[i]));
+        }
+        return a;
     }
 }
