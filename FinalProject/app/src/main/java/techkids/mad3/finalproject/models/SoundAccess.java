@@ -6,6 +6,8 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 
+import techkids.mad3.finalproject.R;
+
 
 /**
  * Created by TrungNT on 7/4/2016.
@@ -13,7 +15,7 @@ import android.media.SoundPool;
 public class SoundAccess {
     private SoundPool sounds;
     private MediaPlayer mediaPlayer;
-    int soundCorrect1;
+    int soundCorrect3, soundWrong3;
 
     public void loadSoundBackground(Context ctx, String fileName)
     {
@@ -39,14 +41,20 @@ public class SoundAccess {
         }
     }
 
-    public void initCorrectAnswer3(Context ctx, int fileName) {
-        sounds = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        soundCorrect1 =  sounds.load(ctx, fileName, 1);
+    public void initSoundEffects(Context ctx) {
+        sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+        soundCorrect3 =  sounds.load(ctx, R.raw.dung3, 1);
+        soundWrong3 =  sounds.load(ctx, R.raw.sai3, 2);
     }
 
     public void playCorrectAnswer3(float leftVolume, float rightVolume, int priority, int loop, float rate)
     {
-        sounds.play(soundCorrect1, leftVolume, rightVolume, priority, loop, rate);
+        sounds.play(soundCorrect3, leftVolume, rightVolume, priority, loop, rate);
+    }
+
+    public void playWrongAnswer3(float leftVolume, float rightVolume, int priority, int loop, float rate)
+    {
+        sounds.play(soundWrong3, leftVolume, rightVolume, priority, loop, rate);
     }
 
 }
