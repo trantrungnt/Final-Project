@@ -68,3 +68,4 @@
 + [Using Android's sound pool class a Tutorial](http://www.101apps.co.za/index.php/articles/using-android-s-soundpool-class-a-tutorial.html)
 + [Playing game sound effects using soundpool](https://www.youtube.com/watch?v=wQ2DKxNtrT4)
 + [How to play sounds using SoundPool](https://www.youtube.com/watch?v=MDJWQ4NRga8)
++ [Radom các số trong Java](http://congdongjava.com/forum/threads/tip-k%E1%BB%B9-thu%E1%BA%ADt-random-t%E1%BA%A1o-danh-s%C3%A1ch-m%E1%BA%A3ng-ng%E1%BA%ABu-nhi%C3%AAn-trong-java.7003/)
