@@ -39,7 +39,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private CalculateEasyFragment calculateEasyFragment;
     private SoundAccess soundAccess;
     private ArrayList<Integer> indexs = new ArrayList<>();
-    private int[] a = getArrayIndex(4);
+    private int[] a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,6 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
 
         soundAccess = new SoundAccess();
         soundAccess.initSoundEffects(getBaseContext());
-
     }
 
     private int random(int low, int high) {
@@ -91,10 +90,11 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             fragmentTransaction.setCustomAnimations(R.anim.left_to_right, 0);
             fragmentTransaction.replace(R.id.questionFragment, calculateEasyFragment).commit();
 
-            answerButtonA.setText("A. " + answers.get(0));
-            answerButtonB.setText("B. " + answers.get(1));
-            answerButtonC.setText("C. " + answers.get(2));
-            answerButtonD.setText("D. " + answers.get(3));
+            a = getArrayIndex(4);
+            answerButtonA.setText("A. " + answers.get(a[0]));
+            answerButtonB.setText("B. " + answers.get(a[1]));
+            answerButtonC.setText("C. " + answers.get(a[2]));
+            answerButtonD.setText("D. " + answers.get(a[3]));
         }
     }
 
@@ -176,20 +176,20 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
                 submitFunction();
                 break;
             case R.id.answerButtonA:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
-                loadSoundEffects(answers.get(0));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[0])));
+                loadSoundEffects(answers.get(a[0]));
                 break;
             case R.id.answerButtonB:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
-                loadSoundEffects(answers.get(1));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[1])));
+                loadSoundEffects(answers.get(a[1]));
                 break;
             case R.id.answerButtonC:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(2)));
-                loadSoundEffects(answers.get(2));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[2])));
+                loadSoundEffects(answers.get(a[2]));
                 break;
             case R.id.answerButtonD:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
-                loadSoundEffects(answers.get(3));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[3])));
+                loadSoundEffects(answers.get(a[3]));
                 break;
         }
     }
@@ -225,7 +225,6 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
 
     private void loadSoundEffects(int answerDisplay)
     {
-        //int resultFromUser = Integer.parseInt(calculateEasyFragment.getResultFromUser().getText().toString());
         int firstNumber = newValues.getFirstValue();
         int secondNumber = newValues.getSecondValue();
         int sum = firstNumber + secondNumber;
