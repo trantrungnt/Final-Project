@@ -11,4 +11,9 @@ public class Helper {
     public static final String SEND_BTN_SUBMIT = "Kết thúc";
     public static final String NEXT_BTN_SUBMIT = "Tiếp theo";
     public static final String EXIT_BTN_BACK_PRESS = "Nhấn tiếp để quay lại";
+    public static final String MUSIC_SOUND_MAIN_BACKGROUND = "sound/conheodat.mp3";
+    public static final String MUSIC_SOUND_EFFECT_ENCOURAGEMENT1 = "sound/dongvien1.mp3";
+    public static final String MUSIC_SOUND_EFFECT_ENCOURAGEMENT2 = "sound/dongvien2.mp3";
+    public static final String MUSIC_SOUND_EFFECT_CONGRATULATION = "sound/chucmung1.mp3";
+    public static final String MUSIC_SOUND_CATEGORY = "sound/music_category.mp3";
 }

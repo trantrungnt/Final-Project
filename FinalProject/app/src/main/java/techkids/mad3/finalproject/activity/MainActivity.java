@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void playSoundMain()
     {
-        soundAccess.loadSoundBackground(getApplicationContext(), "sound/conheodat.mp3");
+        soundAccess.loadSoundBackground(getApplicationContext(), Helper.MUSIC_SOUND_MAIN_BACKGROUND);
     }
 
     private void stopSoundMain()
@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
                     Toast.LENGTH_SHORT).show();
         } else {
-            super.onBackPressed();
             soundAccess.stopSoundBackground();
+            super.onBackPressed();
         }
     }
 }

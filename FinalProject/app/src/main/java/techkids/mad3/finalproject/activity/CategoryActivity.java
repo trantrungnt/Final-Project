@@ -78,7 +78,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
 
     private void loadSoundCategory()
     {
-        soundAccess.loadSoundBackground(getApplicationContext(), "sound/music_category.mp3");
+        soundAccess.loadSoundBackground(getApplicationContext(), Helper.MUSIC_SOUND_CATEGORY);
     }
 
     private void stopSoundCategory()

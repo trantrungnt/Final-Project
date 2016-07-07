@@ -48,12 +48,12 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
         waitDisplayQuestion();
 
         if (finalScore<5)
-            soundAccess.playSoundEffectBackground(getBaseContext(), "sound/dongvien1.mp3");
+            soundAccess.playSoundEffectBackground(getBaseContext(), Helper.MUSIC_SOUND_EFFECT_ENCOURAGEMENT1);
         else
             if (finalScore>=5 && finalScore<=7)
-                soundAccess.playSoundEffectBackground(getBaseContext(), "sound/dongvien2.mp3");
+                soundAccess.playSoundEffectBackground(getBaseContext(), Helper.MUSIC_SOUND_EFFECT_ENCOURAGEMENT2);
             else
-                soundAccess.playSoundEffectBackground(getBaseContext(), "sound/chucmung1.mp3");
+                soundAccess.playSoundEffectBackground(getBaseContext(), Helper.MUSIC_SOUND_EFFECT_CONGRATULATION);
     }
 
     @Override
