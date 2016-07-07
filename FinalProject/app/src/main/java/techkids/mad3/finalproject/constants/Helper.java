@@ -8,6 +8,6 @@ public class Helper {
     public static final String TOTAL_QUESTIONS = "totalQuestions";
     public static final String DATABASE_NAME = "math.db";
     public static final int DATABASE_VERSION = 1;
-    public static final String SEND_BTN_SUBMIT = "Nộp bài";
+    public static final String SEND_BTN_SUBMIT = "Kết thúc";
     public static final String NEXT_BTN_SUBMIT = "Tiếp theo";
 }
