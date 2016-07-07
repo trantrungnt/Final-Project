@@ -1,12 +1,15 @@
 package techkids.mad3.finalproject.activity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import techkids.mad3.finalproject.R;
+import techkids.mad3.finalproject.constants.Helper;
 import techkids.mad3.finalproject.models.SoundAccess;
 
 /**
@@ -16,6 +19,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     private Button btnSummation, btnSubtract;
     private Intent intentOpen;
     private SoundAccess soundAccess;
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +84,19 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     private void stopSoundCategory()
     {
         soundAccess.stopSoundBackground();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        long t = System.currentTimeMillis();
+        if (t - backPressedTime > 2000) {    // 2 secs
+            backPressedTime = t;
+            Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
 

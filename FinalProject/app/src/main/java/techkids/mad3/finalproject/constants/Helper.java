@@ -10,4 +10,5 @@ public class Helper {
     public static final int DATABASE_VERSION = 1;
     public static final String SEND_BTN_SUBMIT = "Kết thúc";
     public static final String NEXT_BTN_SUBMIT = "Tiếp theo";
+    public static final String EXIT_BTN_BACK_PRESS = "Nhấn tiếp để quay lại";
 }

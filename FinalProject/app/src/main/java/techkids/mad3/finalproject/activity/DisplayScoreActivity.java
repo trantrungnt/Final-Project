@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.constants.Helper;
@@ -15,6 +16,7 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
     private TextView finalScoreTextView;
     private Button tryAgainButton;
     private SoundAccess soundAccess;
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
         int finalScore = bundle.getInt(Helper.FINAL_SCORE_KEY);
         int totalQuestions = bundle.getInt(Helper.TOTAL_QUESTIONS);
         finalScoreTextView.setText(finalScore + "/" + totalQuestions);
+
         waitDisplayQuestion();
 
         if (finalScore<5)
@@ -75,6 +78,19 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        long t = System.currentTimeMillis();
+        if (t - backPressedTime > 2000) {    // 2 secs
+            backPressedTime = t;
+            Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            super.onBackPressed();
         }
     }
 }
