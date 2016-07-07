@@ -9,16 +9,17 @@ import android.widget.TextView;
 
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.constants.Helper;
+import techkids.mad3.finalproject.models.SoundAccess;
 
 public class DisplayScoreActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView finalScoreTextView;
     private Button tryAgainButton;
+    private SoundAccess soundAccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_score);
-
         initComponents();
     }
 
@@ -26,11 +27,30 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
         finalScoreTextView = (TextView) findViewById(R.id.finalScore);
         tryAgainButton = (Button) findViewById(R.id.tryAgainButton);
         tryAgainButton.setOnClickListener(this);
+        soundAccess = new SoundAccess();
+        loadSoundEffect();
+    }
 
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+    }
+
+    private void loadSoundEffect() {
         Bundle bundle = getIntent().getExtras();
         int finalScore = bundle.getInt(Helper.FINAL_SCORE_KEY);
         int totalQuestions = bundle.getInt(Helper.TOTAL_QUESTIONS);
         finalScoreTextView.setText(finalScore + "/" + totalQuestions);
+        waitDisplayQuestion();
+
+        if (finalScore<5)
+            soundAccess.playSoundEffectBackground(getBaseContext(), "sound/dongvien1.mp3");
+        else
+            if (finalScore>=5 && finalScore<=7)
+                soundAccess.playSoundEffectBackground(getBaseContext(), "sound/dongvien2.mp3");
+            else
+                soundAccess.playSoundEffectBackground(getBaseContext(), "sound/chucmung1.mp3");
     }
 
     @Override
@@ -47,5 +67,14 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
         startActivity(intent);
         overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
         DisplayScoreActivity.this.finish();
+    }
+
+    private void waitDisplayQuestion()
+    {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

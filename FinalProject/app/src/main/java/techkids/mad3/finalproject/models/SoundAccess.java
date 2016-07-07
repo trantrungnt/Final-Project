@@ -13,9 +13,10 @@ import techkids.mad3.finalproject.R;
  * Created by TrungNT on 7/4/2016.
  */
 public class SoundAccess {
-    private SoundPool sounds;
+    private SoundPool sounds, soundPool;
     private MediaPlayer mediaPlayer;
-    int soundCorrect3, soundWrong3;
+    int soundCorrect3, soundWrong3, encouragement1, encouragement2, congratulations1;
+    private boolean loaded;
 
     public void loadSoundBackground(Context ctx, String fileName)
     {
@@ -43,6 +44,7 @@ public class SoundAccess {
 
     public void initSoundEffects(Context ctx) {
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+
         soundCorrect3 =  sounds.load(ctx, R.raw.dung3, 1);
         soundWrong3 =  sounds.load(ctx, R.raw.sai3, 2);
     }
@@ -57,4 +59,18 @@ public class SoundAccess {
         sounds.play(soundWrong3, leftVolume, rightVolume, priority, loop, rate);
     }
 
+    public void playSoundEffectBackground(Context ctx, String fileName)
+    {
+        mediaPlayer = new MediaPlayer();
+        try {
+            AssetFileDescriptor afd = ctx.getAssets().openFd(fileName);
+            mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            afd.close();
+            mediaPlayer.prepare();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        mediaPlayer.start();
+    }
 }

@@ -243,12 +243,5 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             soundAccess.playWrongAnswer3(1, 1, 1, 0, 0);
     }
 
-    private void waitDisplayQuestion()
-    {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+
 }
