@@ -7,8 +7,9 @@
     <string name="label_multiplication_text">Nhân</string>
     <string name="label_division_text">Chia</string>
     <string name="label_multiplicationTable_text">Bảng cửu chương</string>
-    <string name="submit_text">nộp bài</string>
+    <string name="btnSubmit_text0">Nộp bài</string>
     <string name="try_again_text">Làm lại</string>
     <string name="score_notification_text">Điểm của bạn</string>
     <string name="btnTest_text">Kiểm tra</string>
+    <string name="btnSubmit_text1">Tiếp theo</string>
 </resources>

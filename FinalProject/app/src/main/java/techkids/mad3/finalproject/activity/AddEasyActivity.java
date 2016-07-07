@@ -71,6 +71,9 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
 
         soundAccess = new SoundAccess();
         soundAccess.initSoundEffects(getBaseContext());
+
+        if (currentQuestionNumber < TOTAL_QUESTIONS)
+            submitButton.setText(Helper.NEXT_BTN_SUBMIT);
     }
 
     private int random(int low, int high) {
@@ -95,6 +98,9 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             answerButtonB.setText("B. " + answers.get(a[1]));
             answerButtonC.setText("C. " + answers.get(a[2]));
             answerButtonD.setText("D. " + answers.get(a[3]));
+
+            if (currentQuestionNumber==TOTAL_QUESTIONS)
+                submitButton.setText(Helper.SEND_BTN_SUBMIT);
         }
     }
 
@@ -200,7 +206,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         int i = 0, j, b;
         boolean isDuplicated = false;
         while (i < a.length) {
-            // Dùng Math.abs() để tráng số âm và 0
+            // Dùng Math.abs() để tráng số âm
             b = Math.abs(ran.nextInt() % a.length);
             isDuplicated = false;
             // Có thể tách thành 1 phương thức riêng
@@ -234,5 +240,14 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         }
         else
             soundAccess.playWrongAnswer3(1, 1, 1, 0, 0);
+    }
+
+    private void waitDisplayQuestion()
+    {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
