@@ -46,5 +46,6 @@ public class DisplayScoreActivity extends AppCompatActivity implements View.OnCl
         Intent intent = new Intent(DisplayScoreActivity.this, CategoryActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+        DisplayScoreActivity.this.finish();
     }
 }

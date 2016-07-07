@@ -62,12 +62,14 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     private void openSubstractEasyActivity() {
         intentOpen = new Intent(CategoryActivity.this, SubstractEasyActivity.class);
         startActivity(intentOpen);
+        CategoryActivity.this.finish();
     }
 
     private void openAddEasyActivity()
     {
         intentOpen = new Intent(CategoryActivity.this, AddEasyActivity.class);
         startActivity(intentOpen);
+        CategoryActivity.this.finish();
     }
 
     private void loadSoundCategory()

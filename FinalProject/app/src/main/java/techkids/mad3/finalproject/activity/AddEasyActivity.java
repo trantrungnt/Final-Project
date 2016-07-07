@@ -173,6 +173,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         Intent intent = new Intent(AddEasyActivity.this, DisplayScoreActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+        AddEasyActivity.this.finish();
     }
 
     @Override
