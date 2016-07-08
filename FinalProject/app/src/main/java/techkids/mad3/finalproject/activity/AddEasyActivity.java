@@ -187,6 +187,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.submitButton:
                 submitFunction();
+                invisibleCheckAll();
                 break;
             case R.id.answerButtonA:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[0])));
@@ -342,5 +343,13 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         btnCheckA.setVisibility(View.INVISIBLE);
         btnCheckB.setVisibility(View.INVISIBLE);
         btnCheckC.setVisibility(View.INVISIBLE);
+    }
+
+    private void invisibleCheckAll()
+    {
+        btnCheckA.setVisibility(View.INVISIBLE);
+        btnCheckB.setVisibility(View.INVISIBLE);
+        btnCheckC.setVisibility(View.INVISIBLE);
+        btnCheckD.setVisibility(View.INVISIBLE);
     }
 }
