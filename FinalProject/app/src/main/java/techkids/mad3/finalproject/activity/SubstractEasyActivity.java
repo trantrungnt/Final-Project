@@ -41,6 +41,7 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
     private FragmentTransaction fragmentTransaction;
     private SoundAccess soundAccess;
     private int[] a;
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -272,5 +273,18 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
         }
         else
             soundAccess.playWrongAnswer3(1, 1, 1, 0, 0);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        long t = System.currentTimeMillis();
+        if (t - backPressedTime > 2000) {    // 2 secs
+            Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            super.onBackPressed();
+        }
+        backPressedTime = t;
     }
 }

@@ -38,8 +38,8 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private FragmentTransaction fragmentTransaction;
     private CalculateEasyFragment calculateEasyFragment;
     private SoundAccess soundAccess;
-    private ArrayList<Integer> indexs = new ArrayList<>();
     private int[] a;
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -243,5 +243,17 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             soundAccess.playWrongAnswer3(1, 1, 1, 0, 0);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        long t = System.currentTimeMillis();
+        if (t - backPressedTime > 2000) {    // 2 secs
+            Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            super.onBackPressed();
+        }
+        backPressedTime = t;
+    }
 
 }

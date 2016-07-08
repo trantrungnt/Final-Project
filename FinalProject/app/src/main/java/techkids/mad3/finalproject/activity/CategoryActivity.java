@@ -91,13 +91,13 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     {
         long t = System.currentTimeMillis();
         if (t - backPressedTime > 2000) {    // 2 secs
-            backPressedTime = t;
             Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
                     Toast.LENGTH_SHORT).show();
         } else {
             soundAccess.stopSoundBackground();
             super.onBackPressed();
         }
+        backPressedTime = t;
     }
 }
 
