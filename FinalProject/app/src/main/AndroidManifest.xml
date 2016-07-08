@@ -23,6 +23,9 @@
             android:name=".activity.SubstractEasyActivity"
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity android:name=".activity.DisplayScoreActivity"></activity>
+        <activity
+            android:name=".activity.AuthorActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
     </application>
 
 </manifest>

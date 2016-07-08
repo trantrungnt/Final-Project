@@ -25,4 +25,5 @@
     <string name="text_view_display_mentor2">Trần Đức Hùng</string>
     <string name="text_view_display_mentor3">Lê Tiến Dũng</string>
     <string name="text_view_display_mentor4">Vũ Nhật Linh</string>
+    <string name="btnAuthor_text">Tác giả</string>
 </resources>
