@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import java.util.Random;
 import techkids.mad3.finalproject.R;
 import techkids.mad3.finalproject.constants.Helper;
 import techkids.mad3.finalproject.fragments.CalculateEasyFragment;
+import techkids.mad3.finalproject.models.SoundAccess;
 import techkids.mad3.finalproject.selfDefinedStructure.Pair;
 
 /**
@@ -37,7 +39,8 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
     private int score = 0;
     private CalculateEasyFragment calculateEasyFragment;
     private FragmentTransaction fragmentTransaction;
-
+    private SoundAccess soundAccess;
+    private int[] a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,12 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
         btnAnswerC.setOnClickListener(this);
         btnAnswerD.setOnClickListener(this);
         btnSubmit.setOnClickListener(this);
+
+        soundAccess = new SoundAccess();
+        soundAccess.initSoundEffects(getBaseContext());
+
+        if (currentQuestionNumber < TOTAL_QUESTIONS)
+            btnSubmit.setText(Helper.NEXT_BTN_SUBMIT);
     }
 
 
@@ -78,16 +87,20 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
                 submitFunction();
                 break;
             case R.id.answerButtonA:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(0)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[0])));
+                loadSoundEffects(answers.get(a[0]));
                 break;
             case R.id.answerButtonB:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(1)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[1])));
+                loadSoundEffects(answers.get(a[1]));
                 break;
             case R.id.answerButtonC:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(2)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[2])));
+                loadSoundEffects(answers.get(a[2]));
                 break;
             case R.id.answerButtonD:
-                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(3)));
+                calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[3])));
+                loadSoundEffects(answers.get(a[3]));
                 break;
         }
     }
@@ -180,12 +193,46 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
             fragmentTransaction.setCustomAnimations(R.anim.left_to_right, 0);
             fragmentTransaction.replace(R.id.questionFragment, calculateEasyFragment).commit();
 
-            btnAnswerA.setText("A. " + answers.get(0));
-            btnAnswerB.setText("B. " + answers.get(1));
-            btnAnswerC.setText("C. " + answers.get(2));
-            btnAnswerD.setText("D. " + answers.get(3));
+            a = getArrayIndex(4);
+            btnAnswerA.setText("A. " + answers.get(a[0]));
+            btnAnswerB.setText("B. " + answers.get(a[1]));
+            btnAnswerC.setText("C. " + answers.get(a[2]));
+            btnAnswerD.setText("D. " + answers.get(a[3]));
+
+            if (currentQuestionNumber==TOTAL_QUESTIONS)
+                btnSubmit.setText(Helper.SEND_BTN_SUBMIT);
         }
     }
+
+    private int[] getArrayIndex(int n) {
+        int[] a = new int [n];
+        Random ran = new Random();
+        int i = 0, j, b;
+        boolean isDuplicated = false;
+        while (i < a.length) {
+            // Dùng Math.abs() để tráng số âm
+            b = Math.abs(ran.nextInt() % a.length);
+            isDuplicated = false;
+            // Có thể tách thành 1 phương thức riêng
+            for(j = 0; j < i; j++) {
+                if(a[j] == b) {
+                    isDuplicated = true;
+                }
+            }
+            // Nếu không trùng thì gán và tăng i
+            if (!isDuplicated) {
+                a[i] = b;
+                i++;
+            }
+            // Nếu trùng thì tiếp tục "dò số"
+        }
+
+        for(i = 0; i < a.length; i++) {
+            Log.d("abc", String.valueOf(a[i]));
+        }
+        return a;
+    }
+
 
     private void submitFunction() {
         if (calculateEasyFragment.getResultFromUser().getText().toString().equals("")) {
@@ -207,5 +254,23 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
         Intent intent = new Intent(SubstractEasyActivity.this, DisplayScoreActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+        SubstractEasyActivity.this.finish();
+    }
+
+    private void loadSoundEffects(int answerDisplay)
+    {
+        int firstNumber = newValues.getFirstValue();
+        int secondNumber = newValues.getSecondValue();
+        int sub;
+        if (firstNumber > secondNumber)
+            sub = firstNumber - secondNumber;
+        else
+            sub = secondNumber - firstNumber;
+
+        if (answerDisplay == sub) {
+            soundAccess.playCorrectAnswer3(1, 1, 1, 0, 0);
+        }
+        else
+            soundAccess.playWrongAnswer3(1, 1, 1, 0, 0);
     }
 }
