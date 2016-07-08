@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnExit:
                 closeMainActivity();
-                stopSoundMain();
                 break;
             case R.id.btnAuthor:
                 openAuthorActivity();
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void closeMainActivity() {
         this.finish();
+        soundAccess.stopSoundBackground();
     }
 
     private void openCategoryActivity()
@@ -90,18 +90,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         long t = System.currentTimeMillis();
         if (t - backPressedTime > 2000) {    // 2 secs
-            backPressedTime = t;
             Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
                     Toast.LENGTH_SHORT).show();
         } else {
             soundAccess.stopSoundBackground();
             super.onBackPressed();
         }
+        backPressedTime = t;
     }
 
     private void openAuthorActivity()
     {
         intentOpen = new Intent(MainActivity.this, AuthorActivity.class);
         startActivity(intentOpen);
+        soundAccess.stopSoundBackground();
     }
 }
