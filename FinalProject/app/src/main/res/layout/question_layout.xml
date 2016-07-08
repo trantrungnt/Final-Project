@@ -60,10 +60,9 @@
                          />
                     <Button
                         android:id="@+id/btnCheckA"
-                        android:background="@drawable/correct"
                         android:layout_marginTop="@dimen/btnCheckA_marginTop"
-                        android:layout_marginLeft="@dimen/btnCheckA_marginLeft"
                         android:visibility="invisible"
+                        android:layout_marginLeft="@dimen/btnCheckA_marginLeft"
                         android:layout_width="@dimen/btnCheckA_width"
                         android:layout_height="@dimen/btnCheckA_height" />
                 </RelativeLayout>

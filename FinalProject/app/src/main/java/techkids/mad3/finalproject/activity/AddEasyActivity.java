@@ -40,6 +40,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
     private SoundAccess soundAccess;
     private int[] a;
     private long backPressedTime = 0;
+    private Button btnCheckA, btnCheckB, btnCheckC, btnCheckD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,11 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
 
         if (currentQuestionNumber < TOTAL_QUESTIONS)
             submitButton.setText(Helper.NEXT_BTN_SUBMIT);
+
+        btnCheckA = (Button) this.findViewById(R.id.btnCheckA);
+        btnCheckB = (Button) this.findViewById(R.id.btnCheckB);
+        btnCheckC = (Button) this.findViewById(R.id.btnCheckC);
+        btnCheckD = (Button) this.findViewById(R.id.btnCheckD);
     }
 
     private int random(int low, int high) {
@@ -185,18 +191,23 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.answerButtonA:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[0])));
                 loadSoundEffects(answers.get(a[0]));
+                displayCheckA(answers.get(a[0]));
                 break;
             case R.id.answerButtonB:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[1])));
                 loadSoundEffects(answers.get(a[1]));
+                displayCheckB(answers.get(a[1]));
                 break;
             case R.id.answerButtonC:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[2])));
                 loadSoundEffects(answers.get(a[2]));
+                displayCheckC(answers.get(a[2]));
+
                 break;
             case R.id.answerButtonD:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[3])));
                 loadSoundEffects(answers.get(a[3]));
+                displayCheckD(answers.get(a[3]));
                 break;
         }
     }
@@ -257,4 +268,79 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
         backPressedTime = t;
     }
 
+    private void displayCheckA(int answerDisplay)
+    {
+        int firstNumber = newValues.getFirstValue();
+        int secondNumber = newValues.getSecondValue();
+        int sum = firstNumber + secondNumber;
+
+        if (answerDisplay == sum) {
+            btnCheckA.setBackground(getResources().getDrawable(R.drawable.correct));
+        }
+        else
+        {
+            btnCheckA.setBackground(getResources().getDrawable(R.drawable.wrong));
+        }
+        btnCheckA.setVisibility(View.VISIBLE);
+        btnCheckB.setVisibility(View.INVISIBLE);
+        btnCheckC.setVisibility(View.INVISIBLE);
+        btnCheckD.setVisibility(View.INVISIBLE);
+    }
+
+    private void displayCheckB(int answerDisplay)
+    {
+        int firstNumber = newValues.getFirstValue();
+        int secondNumber = newValues.getSecondValue();
+        int sum = firstNumber + secondNumber;
+
+        if (answerDisplay == sum) {
+            btnCheckB.setBackground(getResources().getDrawable(R.drawable.correct));
+        }
+        else
+        {
+            btnCheckB.setBackground(getResources().getDrawable(R.drawable.wrong));
+        }
+        btnCheckB.setVisibility(View.VISIBLE);
+        btnCheckA.setVisibility(View.INVISIBLE);
+        btnCheckC.setVisibility(View.INVISIBLE);
+        btnCheckD.setVisibility(View.INVISIBLE);
+    }
+
+    private void displayCheckC(int answerDisplay)
+    {
+        int firstNumber = newValues.getFirstValue();
+        int secondNumber = newValues.getSecondValue();
+        int sum = firstNumber + secondNumber;
+
+        if (answerDisplay == sum) {
+            btnCheckC.setBackground(getResources().getDrawable(R.drawable.correct));
+        }
+        else
+        {
+            btnCheckC.setBackground(getResources().getDrawable(R.drawable.wrong));
+        }
+        btnCheckC.setVisibility(View.VISIBLE);
+        btnCheckA.setVisibility(View.INVISIBLE);
+        btnCheckB.setVisibility(View.INVISIBLE);
+        btnCheckD.setVisibility(View.INVISIBLE);
+    }
+
+    private void displayCheckD(int answerDisplay)
+    {
+        int firstNumber = newValues.getFirstValue();
+        int secondNumber = newValues.getSecondValue();
+        int sum = firstNumber + secondNumber;
+
+        if (answerDisplay == sum) {
+            btnCheckD.setBackground(getResources().getDrawable(R.drawable.correct));
+        }
+        else
+        {
+            btnCheckD.setBackground(getResources().getDrawable(R.drawable.wrong));
+        }
+        btnCheckD.setVisibility(View.VISIBLE);
+        btnCheckA.setVisibility(View.INVISIBLE);
+        btnCheckB.setVisibility(View.INVISIBLE);
+        btnCheckC.setVisibility(View.INVISIBLE);
+    }
 }
