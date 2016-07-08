@@ -12,7 +12,7 @@ import techkids.mad3.finalproject.constants.Helper;
 import techkids.mad3.finalproject.models.SoundAccess;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnBeginFirstScreen, btnTest, btnExit;
+    private Button btnBeginFirstScreen, btnTest, btnExit, btnAuthor;
     private Intent intentOpen;
     private SoundAccess soundAccess;
     private long backPressedTime = 0;
@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnExit.setOnClickListener(this);
 
         soundAccess = new SoundAccess();
+
+        btnAuthor = (Button) this.findViewById(R.id.btnAuthor);
+        btnAuthor.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnExit:
                 closeMainActivity();
                 stopSoundMain();
+                break;
+            case R.id.btnAuthor:
+                openAuthorActivity();
                 break;
         }
     }
@@ -91,5 +97,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             soundAccess.stopSoundBackground();
             super.onBackPressed();
         }
+    }
+
+    private void openAuthorActivity()
+    {
+        intentOpen = new Intent(MainActivity.this, AuthorActivity.class);
+        startActivity(intentOpen);
     }
 }
