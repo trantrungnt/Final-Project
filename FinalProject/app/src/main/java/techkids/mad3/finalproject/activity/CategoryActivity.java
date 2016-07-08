@@ -95,6 +95,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
             Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
                     Toast.LENGTH_SHORT).show();
         } else {
+            soundAccess.stopSoundBackground();
             super.onBackPressed();
         }
     }
