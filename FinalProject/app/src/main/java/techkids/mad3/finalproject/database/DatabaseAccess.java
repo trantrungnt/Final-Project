@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+import techkids.mad3.finalproject.models.Question;
+
 /**
  * Created by TrungNT on 7/4/2016.
  */
@@ -59,12 +61,26 @@ public class DatabaseAccess {
      *
      * @return a List of quotes
      */
-    public List<String> getQuestions() {
-        List<String> list = new ArrayList<>();
-        Cursor cursor = database.rawQuery("SELECT ContentQuestion FROM Question", null);
+    public List<Question> getQuestions() {
+        List<Question> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM Question", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            list.add(cursor.getString(0));
+            Question question = new Question();
+
+            question.setId_question(cursor.getInt(0));
+            question.setId_sub(cursor.getInt(1));
+            question.setKind_of_math(cursor.getInt(2));
+            question.setContent_question(cursor.getString(3));
+            question.setAnswer_a(cursor.getString(4));
+            question.setAnswer_b(cursor.getString(5));
+            question.setAnswer_c(cursor.getString(6));
+            question.setAnswer_d(cursor.getString(7));
+            question.setAnswer_right(cursor.getString(8));
+            question.setExplane(cursor.getString(10));
+
+            list.add(question);
+
             cursor.moveToNext();
         }
         cursor.close();
