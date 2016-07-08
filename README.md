@@ -71,3 +71,4 @@
 + [Radom các số trong Java](http://congdongjava.com/forum/threads/tip-k%E1%BB%B9-thu%E1%BA%ADt-random-t%E1%BA%A1o-danh-s%C3%A1ch-m%E1%BA%A3ng-ng%E1%BA%ABu-nhi%C3%AAn-trong-java.7003/)
 + [Pausing Execution with Sleep](https://docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html)
 + [Playing sounds Android](https://dzone.com/articles/playing-sounds-android)
++ [Advanced Android database](http://www.javahelps.com/2015/03/advanced-android-database.html)
