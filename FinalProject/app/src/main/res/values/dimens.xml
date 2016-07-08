@@ -49,4 +49,20 @@
     <dimen name="text_size_label">20sp</dimen>
     <dimen name="text_view_empty_width">100dp</dimen>
     <dimen name="text_view_mentor_marginLeft">5dp</dimen>
+    <dimen name="btnCheckA_marginTop">10dp</dimen>
+    <dimen name="btnCheckA_marginLeft">119dp</dimen>
+    <dimen name="btnCheckA_width">30dp</dimen>
+    <dimen name="btnCheckA_height">30dp</dimen>
+    <dimen name="btnCheckB_marginTop">10dp</dimen>
+    <dimen name="btnCheckB_marginLeft">119dp</dimen>
+    <dimen name="btnCheckB_width">30dp</dimen>
+    <dimen name="btnCheckB_height">30dp</dimen>
+    <dimen name="btnCheckC_marginTop">10dp</dimen>
+    <dimen name="btnCheckC_marginLeft">119dp</dimen>
+    <dimen name="btnCheckC_width">30dp</dimen>
+    <dimen name="btnCheckC_height">30dp</dimen>
+    <dimen name="btnCheckD_marginTop">10dp</dimen>
+    <dimen name="btnCheckD_marginLeft">119dp</dimen>
+    <dimen name="btnCheckD_width">30dp</dimen>
+    <dimen name="btnCheckD_height">30dp</dimen>
 </resources>
