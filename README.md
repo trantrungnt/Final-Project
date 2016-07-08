@@ -72,3 +72,4 @@
 + [Pausing Execution with Sleep](https://docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html)
 + [Playing sounds Android](https://dzone.com/articles/playing-sounds-android)
 + [Advanced Android database](http://www.javahelps.com/2015/03/advanced-android-database.html)
++ [Change Color Image Online](http://editor.pho.to/edit/)
