@@ -9,7 +9,9 @@
     <string name="label_multiplicationTable_text">Bảng cửu chương</string>
     <string name="btnSubmit_text0">Kết thúc</string>
     <string name="try_again_text">Làm lại</string>
-    <string name="score_notification_text">Điểm của bạn</string>
+    <string name="score_notification_text">Điểm của bé</string>
     <string name="btnTest_text">Kiểm tra</string>
     <string name="btnSubmit_text1">Tiếp theo</string>
+    <string name="btnCompare_text">So sánh</string>
+    <string name="btnPuzzle_text">Toán đố</string>
 </resources>

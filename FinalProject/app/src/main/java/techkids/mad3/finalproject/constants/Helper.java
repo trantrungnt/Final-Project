@@ -16,4 +16,5 @@ public class Helper {
     public static final String MUSIC_SOUND_EFFECT_ENCOURAGEMENT2 = "sound/dongvien2.mp3";
     public static final String MUSIC_SOUND_EFFECT_CONGRATULATION = "sound/chucmung1.mp3";
     public static final String MUSIC_SOUND_CATEGORY = "sound/music_category.mp3";
+    public static final String MESSAGE_CHOICE_ANSWER = "Bé chọn câu hỏi nào?";
 }

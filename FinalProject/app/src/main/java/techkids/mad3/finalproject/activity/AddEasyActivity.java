@@ -155,7 +155,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
 
     private void submitFunction() {
         if (calculateEasyFragment.getResultFromUser().getText().toString().equals("")) {
-            Toast.makeText(this, "Choose an answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, Helper.MESSAGE_CHOICE_ANSWER, Toast.LENGTH_SHORT).show();
         } else {
             calculateScore();
             if (currentQuestionNumber < TOTAL_QUESTIONS) {
