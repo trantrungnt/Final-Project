@@ -251,6 +251,7 @@ public class AddEasyActivity extends AppCompatActivity implements View.OnClickLi
             Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
                     Toast.LENGTH_SHORT).show();
         } else {
+            AddEasyActivity.this.finish();
             super.onBackPressed();
         }
         backPressedTime = t;

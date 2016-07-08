@@ -283,6 +283,7 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
             Toast.makeText(this, Helper.EXIT_BTN_BACK_PRESS,
                     Toast.LENGTH_SHORT).show();
         } else {
+            SubstractEasyActivity.this.finish();
             super.onBackPressed();
         }
         backPressedTime = t;

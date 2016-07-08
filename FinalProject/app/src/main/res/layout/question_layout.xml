@@ -50,7 +50,7 @@
                     android:id="@+id/answerButtonA"
                     android:layout_marginTop="1dp"
                     android:textColor="@color/colorAccent"
-                    android:background="@drawable/answer1"
+                    android:background="@drawable/button_answer1"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
@@ -58,7 +58,7 @@
                 <Button
                     android:id="@+id/answerButtonB"
                     android:textColor="@color/colorAccent"
-                    android:background="@drawable/answer3"
+                    android:background="@drawable/button_answer3"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
@@ -74,7 +74,7 @@
                     android:textColor="@color/colorAccent"
                     android:layout_width="0dp"
                     android:layout_marginTop="1dp"
-                    android:background="@drawable/answer2"
+                    android:background="@drawable/button_answer2"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
 
@@ -82,7 +82,7 @@
                     android:id="@+id/answerButtonD"
                     android:textColor="@color/colorAccent"
                     android:layout_width="0dp"
-                    android:background="@drawable/answer4"
+                    android:background="@drawable/button_answer4"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1" />
             </LinearLayout>
