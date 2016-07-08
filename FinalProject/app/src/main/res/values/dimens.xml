@@ -37,4 +37,16 @@
     <dimen name="btn_height">71dp</dimen>
     <dimen name="btnTest_marginTop">15dp</dimen>
     <dimen name="btnExit_marginTop">15dp</dimen>
+    <dimen name="text_view_author_marginTop">10dp</dimen>
+    <dimen name="image_author_width">200dp</dimen>
+    <dimen name="image_author_height">200dp</dimen>
+    <dimen name="image_author_marginTop">10dp</dimen>
+    <dimen name="HeaderTextStyle_width">350dp</dimen>
+    <dimen name="HeaderTextStyle_height">4dp</dimen>
+    <dimen name="linear_layout_marginTop">10dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="text_view_author_marginLeft">10dp</dimen>
+    <dimen name="text_size_label">20sp</dimen>
+    <dimen name="text_view_empty_width">100dp</dimen>
+    <dimen name="text_view_mentor_marginLeft">5dp</dimen>
 </resources>

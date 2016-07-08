@@ -14,4 +14,15 @@
     <string name="btnSubmit_text1">Tiếp theo</string>
     <string name="btnCompare_text">So sánh</string>
     <string name="btnPuzzle_text">Toán đố</string>
+    <string name="text_view_name">Họ và tên:</string>
+    <string name="text_view_display_name">Nguyễn Trần Trung</string>
+    <string name="text_view_class">Lớp:</string>
+    <string name="text_view_display_class">Android 3 - TechKids School</string>
+    <string name="text_view_email">Email:</string>
+    <string name="text_view_display_email">nguyentrantrung1986@gmail.com</string>
+    <string name="text_view_mentor">Giảng viên:</string>
+    <string name="text_view_display_mentor1">Bùi Xuân Cảnh</string>
+    <string name="text_view_display_mentor2">Trần Đức Hùng</string>
+    <string name="text_view_display_mentor3">Lê Tiến Dũng</string>
+    <string name="text_view_display_mentor4">Vũ Nhật Linh</string>
 </resources>

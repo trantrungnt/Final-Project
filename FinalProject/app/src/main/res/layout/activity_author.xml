@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/image_author_width"
+        android:layout_height="@dimen/image_author_height"
+        android:src="@drawable/trungnt"
+        android:layout_marginTop="@dimen/image_author_marginTop"
+        android:layout_gravity="center"
+
+        />
+
+    <TextView
+        style="@style/HeaderTextStyle"
+        android:layout_width="@dimen/HeaderTextStyle_width"
+        android:layout_height="@dimen/HeaderTextStyle_height"
+        android:background="@color/colorBlue"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/linear_layout_marginTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_name"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_author_marginLeft"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_name"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/text_view_author_marginTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_class"
+            android:textSize="@dimen/text_size_label"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_class"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/linear_layout_marginTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_email"
+            android:textSize="@dimen/text_size_label"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_email"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/linear_layout_marginTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_mentor"
+            android:textSize="@dimen/text_size_label"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_mentor1"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_author_marginLeft"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="@dimen/text_view_empty_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_marginLeft"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_mentor2"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_author_marginLeft"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="@dimen/text_view_empty_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_author_marginLeft"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_mentor3"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_author_marginLeft"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="@dimen/text_view_empty_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_marginLeft"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_display_mentor4"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_view_author_marginLeft"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Thoát"
+        android:layout_width="150dp"
+        android:layout_height="50dp" />
+</LinearLayout>
