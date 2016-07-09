@@ -29,7 +29,7 @@ import techkids.mad3.finalproject.models.SoundAccess;
 public class PuzzleActivity extends AppCompatActivity implements View.OnClickListener{
     private Button submitButton, answerButtonA, answerButtonB, answerButtonC, answerButtonD;
     private final int TOTAL_ANSWERS = 4;
-    private final int TOTAL_QUESTIONS = 10;
+    private final int TOTAL_QUESTIONS = 9;
     private SoundAccess soundAccess;
     private Button btnCheckA, btnCheckB, btnCheckC, btnCheckD;
     private int currentQuestionNumber = -1;
@@ -91,26 +91,31 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
         switch (id) {
             case R.id.submitButton:
                 submitFunction();
+                invisibleCheckAll();
                 break;
             case R.id.answerButtonA:
                 answer1 = answerButtonA.getText().toString().substring(3);
                 puzzleFragment.getResultFromUser().setText(answer1);
                 loadSoundEffects(Integer.parseInt(answer1));
+                displayCheckA(Integer.parseInt(answer1));
                 break;
             case R.id.answerButtonB:
                 answer2 = answerButtonB.getText().toString().substring(3);
                 puzzleFragment.getResultFromUser().setText(answer2);
                 loadSoundEffects(Integer.parseInt(answer2));
+                displayCheckB(Integer.parseInt(answer2));
                 break;
             case R.id.answerButtonC:
                 answer3 = answerButtonC.getText().toString().substring(3);
                 puzzleFragment.getResultFromUser().setText(answer3);
                 loadSoundEffects(Integer.parseInt(answer3));
+                displayCheckC(Integer.parseInt(answer3));
                 break;
             case R.id.answerButtonD:
                 answer4 = answerButtonD.getText().toString().substring(3);
                 puzzleFragment.getResultFromUser().setText(answer4);
                 loadSoundEffects(Integer.parseInt(answer4));
+                displayCheckD(Integer.parseInt(answer4));
                 break;
         }
     }
@@ -199,7 +204,7 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
     private void moveToDisplayScoreActivity() {
         Bundle bundle = new Bundle();
         bundle.putInt(Helper.FINAL_SCORE_KEY, score);
-        bundle.putInt(Helper.TOTAL_QUESTIONS, TOTAL_QUESTIONS);
+        bundle.putInt(Helper.TOTAL_QUESTIONS, TOTAL_QUESTIONS + 1);
         Intent intent = new Intent(PuzzleActivity.this, DisplayScoreActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
@@ -283,4 +288,154 @@ public class PuzzleActivity extends AppCompatActivity implements View.OnClickLis
         backPressedTime = t;
     }
 
+    private void displayCheckA(int answerDisplay)
+    {
+        if (null != findViewById(R.id.questionFragment))
+        {
+            int right = answers.get(4);
+            String answer_choice ="";
+
+            switch (right)
+            {
+                case 1:
+                    answer_choice = String.valueOf(answers.get(0));
+                    break;
+                case 2:
+                    answer_choice = String.valueOf(answers.get(1));
+                    break;
+                case 3:
+                    answer_choice = String.valueOf(answers.get(2));
+                    break;
+                case 4:
+                    answer_choice = String.valueOf(answers.get(3));
+                    break;
+            }
+
+
+            if (answerDisplay == Integer.parseInt(answer_choice)) {
+                btnCheckA.setBackground(getResources().getDrawable(R.drawable.correct));
+            }
+            else
+            {
+                btnCheckA.setBackground(getResources().getDrawable(R.drawable.wrong));
+            }
+            btnCheckA.setVisibility(View.VISIBLE);
+            btnCheckB.setVisibility(View.INVISIBLE);
+            btnCheckC.setVisibility(View.INVISIBLE);
+            btnCheckD.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void displayCheckB(int answerDisplay)
+    {
+        if (null != findViewById(R.id.questionFragment)) {
+            int right = answers.get(4);
+            String answer_choice = "";
+
+            switch (right) {
+                case 1:
+                    answer_choice = String.valueOf(answers.get(0));
+                    break;
+                case 2:
+                    answer_choice = String.valueOf(answers.get(1));
+                    break;
+                case 3:
+                    answer_choice = String.valueOf(answers.get(2));
+                    break;
+                case 4:
+                    answer_choice = String.valueOf(answers.get(3));
+                    break;
+            }
+
+            if (answerDisplay == Integer.parseInt(answer_choice)) {
+                btnCheckB.setBackground(getResources().getDrawable(R.drawable.correct));
+            }
+            else
+            {
+                btnCheckB.setBackground(getResources().getDrawable(R.drawable.wrong));
+            }
+            btnCheckB.setVisibility(View.VISIBLE);
+            btnCheckA.setVisibility(View.INVISIBLE);
+            btnCheckC.setVisibility(View.INVISIBLE);
+            btnCheckD.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void displayCheckC(int answerDisplay)
+    {
+        if (null != findViewById(R.id.questionFragment)) {
+            int right = answers.get(4);
+            String answer_choice = "";
+
+            switch (right) {
+                case 1:
+                    answer_choice = String.valueOf(answers.get(0));
+                    break;
+                case 2:
+                    answer_choice = String.valueOf(answers.get(1));
+                    break;
+                case 3:
+                    answer_choice = String.valueOf(answers.get(2));
+                    break;
+                case 4:
+                    answer_choice = String.valueOf(answers.get(3));
+                    break;
+            }
+
+            if (answerDisplay == Integer.parseInt(answer_choice)) {
+                btnCheckC.setBackground(getResources().getDrawable(R.drawable.correct));
+            }
+            else
+            {
+                btnCheckC.setBackground(getResources().getDrawable(R.drawable.wrong));
+            }
+            btnCheckC.setVisibility(View.VISIBLE);
+            btnCheckA.setVisibility(View.INVISIBLE);
+            btnCheckB.setVisibility(View.INVISIBLE);
+            btnCheckD.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void displayCheckD(int answerDisplay)
+    {
+        if (null != findViewById(R.id.questionFragment)) {
+            int right = answers.get(4);
+            String answer_choice = "";
+
+            switch (right) {
+                case 1:
+                    answer_choice = String.valueOf(answers.get(0));
+                    break;
+                case 2:
+                    answer_choice = String.valueOf(answers.get(1));
+                    break;
+                case 3:
+                    answer_choice = String.valueOf(answers.get(2));
+                    break;
+                case 4:
+                    answer_choice = String.valueOf(answers.get(3));
+                    break;
+            }
+
+            if (answerDisplay == Integer.parseInt(answer_choice)) {
+                btnCheckD.setBackground(getResources().getDrawable(R.drawable.correct));
+            }
+            else
+            {
+                btnCheckD.setBackground(getResources().getDrawable(R.drawable.wrong));
+            }
+            btnCheckD.setVisibility(View.VISIBLE);
+            btnCheckA.setVisibility(View.INVISIBLE);
+            btnCheckB.setVisibility(View.INVISIBLE);
+            btnCheckC.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void invisibleCheckAll()
+    {
+        btnCheckA.setVisibility(View.INVISIBLE);
+        btnCheckB.setVisibility(View.INVISIBLE);
+        btnCheckC.setVisibility(View.INVISIBLE);
+        btnCheckD.setVisibility(View.INVISIBLE);
+    }
 }
