@@ -29,6 +29,9 @@
         <activity
             android:name=".activity.PuzzleActivity"
             android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name=".activity.CompareActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
     </application>
 
 </manifest>

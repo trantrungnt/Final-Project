@@ -16,7 +16,7 @@ import techkids.mad3.finalproject.models.SoundAccess;
  * Created by TrungNT on 5/14/2016.
  */
 public class CategoryActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnSummation, btnSubtract, btnPuzzle;
+    private Button btnSummation, btnSubtract, btnPuzzle, btnCompare;
     private Intent intentOpen;
     private SoundAccess soundAccess;
     private long backPressedTime = 0;
@@ -45,6 +45,9 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
 
         btnPuzzle = (Button) this.findViewById(R.id.btnPuzzle);
         btnPuzzle.setOnClickListener(this);
+
+        btnCompare = (Button) this.findViewById(R.id.btnCompare);
+        btnCompare.setOnClickListener(this);
     }
 
     @Override
@@ -65,9 +68,19 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
                 openPuzzleActivity();
                 stopSoundCategory();
                 break;
+            case R.id.btnCompare:
+                openCompareActivity();
+                stopSoundCategory();
+                break;
         }
 
 
+    }
+
+    private void openCompareActivity() {
+        intentOpen = new Intent(CategoryActivity.this, CompareActivity.class);
+        startActivity(intentOpen);
+        CategoryActivity.this.finish();
     }
 
     private void openSubstractEasyActivity() {

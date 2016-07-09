@@ -86,4 +86,31 @@ public class DatabaseAccess {
         cursor.close();
         return list;
     }
+
+    public List<Question> getQuestionsCompare() {
+        List<Question> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM Question WHERE KindOfMath=3", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Question question = new Question();
+
+            question.setId_question(cursor.getInt(0));
+            question.setId_sub(cursor.getInt(1));
+            question.setKind_of_math(cursor.getInt(2));
+            question.setContent_question(cursor.getString(3));
+            question.setAnswer_a(cursor.getString(4));
+            question.setAnswer_b(cursor.getString(5));
+            question.setAnswer_c(cursor.getString(6));
+            question.setAnswer_d(cursor.getString(7));
+            question.setAnswer_right(cursor.getString(8));
+            question.setExplane(cursor.getString(10));
+
+            list.add(question);
+
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+
 }
