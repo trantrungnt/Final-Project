@@ -63,7 +63,7 @@ public class DatabaseAccess {
      */
     public List<Question> getQuestions() {
         List<Question> list = new ArrayList<>();
-        Cursor cursor = database.rawQuery("SELECT * FROM Question", null);
+        Cursor cursor = database.rawQuery("SELECT * FROM Question WHERE KindOfMath=0", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             Question question = new Question();
