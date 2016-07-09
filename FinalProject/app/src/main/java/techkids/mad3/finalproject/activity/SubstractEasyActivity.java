@@ -97,22 +97,22 @@ public class SubstractEasyActivity extends AppCompatActivity implements View.OnC
             case R.id.answerButtonA:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[0])));
                 loadSoundEffects(answers.get(a[0]));
-                displayCheckA(answers.get(a[0]);
+                displayCheckA(answers.get(a[0]));
                 break;
             case R.id.answerButtonB:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[1])));
                 loadSoundEffects(answers.get(a[1]));
-                displayCheckB(answers.get(a[1]);
+                displayCheckB(answers.get(a[1]));
                 break;
             case R.id.answerButtonC:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[2])));
                 loadSoundEffects(answers.get(a[2]));
-                displayCheckC(answers.get(a[2]);
+                displayCheckC(answers.get(a[2]));
                 break;
             case R.id.answerButtonD:
                 calculateEasyFragment.getResultFromUser().setText(String.valueOf(answers.get(a[3])));
                 loadSoundEffects(answers.get(a[3]));
-                displayCheckD(answers.get(a[3]);
+                displayCheckD(answers.get(a[3]));
                 break;
         }
     }
