@@ -10,6 +10,10 @@
 + Lê Tiến Dũng
 + Vũ Nhật Linh
 
+##Demo sản phẩm
++ [Demo phiên bản Bé học Toán lớp 1 phiên bản 2](https://youtu.be/CdFUrdvhOVM)
+
+
 ##Các công việc phải làm
 + [Phân tích yêu cầu bài toán và tạo Bản giao diện thiết kế](https://goo.gl/aFsDRo)
 + Giao diện Main Activity: Start (tạm thời): gồm 3 nút: Luyện tập, Kiểm tra, Thoát ...
