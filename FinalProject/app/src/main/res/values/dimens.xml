@@ -65,4 +65,7 @@
     <dimen name="btnCheckD_marginLeft">119dp</dimen>
     <dimen name="btnCheckD_width">30dp</dimen>
     <dimen name="btnCheckD_height">30dp</dimen>
+    <dimen name="resultFromUser_width">300dp</dimen>
+    <dimen name="tvContentPuzzle_width">350dp</dimen>
+    <dimen name="tvContentPuzzle_marginLeft">10dp</dimen>
 </resources>
