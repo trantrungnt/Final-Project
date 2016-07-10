@@ -80,5 +80,5 @@
 + [Advanced Android database](http://www.javahelps.com/2015/03/advanced-android-database.html)
 + [Change Color Image Online](http://editor.pho.to/edit/)
 
-
+###Giấy phép xuất bản (Licence)
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Giấy phép Creative Commons " style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Tài liệu này được chia sẻ với các điều khoản của <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">giấy phép Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Quốc tế </a>.
