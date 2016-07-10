@@ -34,6 +34,8 @@
 + Thông báo điểm cho người chơi: nên viết thêm dòng chức mừng động viên (làm được khoảng 6/10 thì chúc mừng, làm được 3/10 câu thì động viên bạn phải cố gắng nhiều hơn ...)
 + Khi nhấn nút Kiểm tra ở giao diện màn hình chính: cho người chơi tính toán theo thời gian đếm
 
+##Yêu cầu thêm cho App trong đêm Hackathon
++ ![Hackathon (9/7/2016)](http://i477.photobucket.com/albums/rr132/trungepu/27589786014_3b32fb4115_o_zpswneohsjx.jpg)
 
 ##Thiết kế giao diện nội dung bộ câu hỏi
 ![final-project-1](http://i477.photobucket.com/albums/rr132/trungepu/final-project-1_zpsrznvlfms.jpg)
