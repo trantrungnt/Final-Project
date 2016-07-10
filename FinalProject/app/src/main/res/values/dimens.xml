@@ -74,4 +74,7 @@
     <dimen name="btnClose_height">50dp</dimen>
     <dimen name="linearLayout_marginTop">10dp</dimen>
     <dimen name="label_display_class_marginLeft">5dp</dimen>
+    <dimen name="tvContentCompare_width">300dp</dimen>
+    <dimen name="tvContentCompare_marginLeft">15dp</dimen>
+    <dimen name="tvContentCompare_text_size">40sp</dimen>
 </resources>

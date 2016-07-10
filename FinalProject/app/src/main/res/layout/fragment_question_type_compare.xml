@@ -13,8 +13,9 @@
         <TextView
             android:id="@+id/tvContentCompare"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="15dp"
-            android:layout_width="300dp"
+            android:textSize="@dimen/tvContentCompare_text_size"
+            android:layout_marginLeft="@dimen/tvContentCompare_marginLeft"
+            android:layout_width="@dimen/tvContentCompare_width"
             android:layout_height="wrap_content" />
 
         <TextView
